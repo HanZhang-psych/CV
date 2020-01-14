@@ -20,9 +20,10 @@ Feel free to clone the files and edit them to make your own!
 Make sure to install `vitae` and `tinytex` if you haven't done so:
 
 ```
-install.packages("vitae")
 install.packages("tinytex")
 tinytex::install_tinytex()
+
+install.packages("vitae")
 ```
 
 Happy vitae-ing and wish everyone good luck on the job market!
