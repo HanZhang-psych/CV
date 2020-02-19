@@ -16,6 +16,7 @@ output:
     pandoc_args: ["--lua-filter=multiple-bibliographies.lua"] # used for creating bibliographies for multiple sections
 csl: apa-cv.csl # change this if you want to use other citation styles
 bibliography_published: "Published.bib" # use separate .bib files and assign each of them a unique key: bibliography_*
+bibliography_underreview: "Under review.bib"
 bibliography_inprep: "In prep.bib"
 bibliography_presentations: "Presentations.bib"
 nocite: '@*' # don't change this if you want to print out all the refs
@@ -83,6 +84,18 @@ tribble(
 \endgroup
 <!-- Bib-printing block ends here. -->
 
+
+
+# Manuscripts Under Review 
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+::: {#refs_underreview}
+:::
+
+\endgroup
 
 
 # Manuscripts In Preparation
