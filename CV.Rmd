@@ -38,9 +38,9 @@ Attention; distraction; mind-wandering; eye movements
 library(tibble)
 tribble(
   ~ Degree, ~ Year, ~ Institution, ~ Where,
-  "Bachelor of Science, Psychology", "09/2010-06/2014", "Beijing Normal University", "Beijing, China",
-  "Master of Science, Combined Program in Education and Psychology", "09/2014-05/2018", "University of Michigan", "Ann Arbor, MI, USA",
   "Doctor of Philosophy, Combined Program in Education and Psychology", "09/2018-05/2020 (expected)", "University of Michigan", "Ann Arbor, MI, USA",
+  "Master of Science, Combined Program in Education and Psychology", "09/2014-05/2018", "University of Michigan", "Ann Arbor, MI, USA",
+  "Bachelor of Science, Psychology", "09/2010-06/2014", "Beijing Normal University", "Beijing, China",
 ) %>% 
   detailed_entries(Degree, Year, Institution, Where)
 ```
