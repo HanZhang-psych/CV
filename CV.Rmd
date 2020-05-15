@@ -1,8 +1,8 @@
 ---
 name: Han
 surname: Zhang
-position: "Ph.D. Candidate"
-address: "Combined Program in Education and Psychology, University of Michigan"
+position: "Postdoctoral Research Fellow"
+address: "Department of Psychology, University of Michigan"
 www: sites.lsa.umich.edu/hanzh
 email: "hanzh@umich.edu"
 #orcid: 0000-0001-6087-0428
@@ -36,12 +36,14 @@ Attention; distraction; mind-wandering; eye movements
 
 ```{r}
 tribble(
-  ~ Degree, ~ Year, ~ Institution, ~ Where,
-  "Doctor of Philosophy, Combined Program in Education and Psychology", "09/2018-05/2020", "University of Michigan", "Ann Arbor, MI, USA",
-  "Master of Science, Combined Program in Education and Psychology", "09/2014-05/2018", "University of Michigan", "Ann Arbor, MI, USA",
-  "Bachelor of Science, Psychology", "09/2010-06/2014", "Beijing Normal University", "Beijing, China",
+  ~ Degree, ~Advisor, ~ Year, ~ Institution, ~ Where,
+  "Postdoctoral Research Fellow, Department of Psychology","Advisor: Dr. John Jonides","05/2020-present","University of Michigan","Ann Arbor, MI, USA",
+  "Doctor of Philosophy, Combined Program in Education and Psychology", "Dissertation: Mind-wandering: What Can We Learn from Eye Movements?","09/2018-05/2020", "University of Michigan", "Ann Arbor, MI, USA",
+    "Doctor of Philosophy, Combined Program in Education and Psychology", "Advisors: Drs. Kevin Miller & Kai Cortina","09/2018-05/2020", "University of Michigan", "Ann Arbor, MI, USA",
+  "Master of Science, Combined Program in Education and Psychology", NA, "09/2014-05/2018", "University of Michigan", "Ann Arbor, MI, USA",
+  "Bachelor of Science, Psychology", NA, "09/2010-06/2014", "Beijing Normal University", "Beijing, China",
 ) %>% 
-  detailed_entries(Degree, Year, Institution, Where)
+  detailed_entries(what=Degree, when=Year, with=Institution, where=Where, why=Advisor)
 ```
 
 # Awards and Grants
