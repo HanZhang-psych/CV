@@ -177,6 +177,12 @@ tribble(
   )
 ```
 
+# Professional Service
+
+## Ad Hoc Reviewer
+
+* Journal of Experimental Psychology: General
+* Memory & Cognition
 
 # References
 
