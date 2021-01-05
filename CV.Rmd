@@ -14,6 +14,7 @@ date: "`r format(Sys.time(), '%B %Y')`"
 output: 
   vitae::awesomecv:
     pandoc_args: ["--lua-filter=multiple-bibliographies.lua"] # used for creating bibliographies for multiple sections
+    keep_tex: yes
 csl: apa-cv.csl # change this if you want to use other citation styles
 bibliography_published: "Published.bib" # use separate .bib files and assign each of them a unique key: bibliography_*
 bibliography_underreview: "Under review.bib"
@@ -36,14 +37,44 @@ Attention; distraction; mind-wandering; eye movements
 
 ```{r}
 tribble(
-  ~ Degree, ~Advisor, ~ Year, ~ Institution, ~ Where,
-  "Postdoctoral Research Fellow, Department of Psychology","Advisor: Dr. John Jonides","05/2020-present","University of Michigan","Ann Arbor, MI, USA",
-  "Doctor of Philosophy, Combined Program in Education and Psychology", "Dissertation: Mind-wandering: What Can We Learn from Eye Movements?","09/2018-05/2020", "University of Michigan", "Ann Arbor, MI, USA",
-    "Doctor of Philosophy, Combined Program in Education and Psychology", "Advisors: Drs. Kevin Miller & Kai Cortina","09/2018-05/2020", "University of Michigan", "Ann Arbor, MI, USA",
-  "Master of Science, Combined Program in Education and Psychology", NA, "09/2014-05/2018", "University of Michigan", "Ann Arbor, MI, USA",
-  "Bachelor of Science, Psychology", NA, "09/2010-06/2014", "Beijing Normal University", "Beijing, China",
-) %>% 
-  detailed_entries(what=Degree, when=Year, with=Institution, where=Where, why=Advisor)
+  ~ Degree,
+  ~ Advisor,
+  ~ Year,
+  ~ Institution,
+  ~ Where,
+  "Postdoctoral Research Fellow, Department of Psychology",
+  "Advisor: Dr. John Jonides",
+  "05/2020-present",
+  "University of Michigan",
+  "Ann Arbor, MI, USA",
+  "Doctor of Philosophy, Combined Program in Education and Psychology",
+  "Dissertation: Mind-wandering: What Can We Learn from Eye Movements?",
+  "09/2018-05/2020",
+  "University of Michigan",
+  "Ann Arbor, MI, USA",
+  "Doctor of Philosophy, Combined Program in Education and Psychology",
+  "Advisors: Drs. Kevin Miller & Kai Cortina",
+  "09/2018-05/2020",
+  "University of Michigan",
+  "Ann Arbor, MI, USA",
+  "Master of Science, Combined Program in Education and Psychology",
+  NA,
+  "09/2014-05/2018",
+  "University of Michigan",
+  "Ann Arbor, MI, USA",
+  "Bachelor of Science, Psychology",
+  NA,
+  "09/2010-06/2014",
+  "Beijing Normal University",
+  "Beijing, China",
+) %>%
+  detailed_entries(
+    what = Degree,
+    when = Year,
+    with = Institution,
+    where = Where,
+    why = Advisor
+  )
 ```
 
 # Awards and Grants
@@ -69,7 +100,7 @@ tribble(
     where = Year,
     with = Name, 
     what = Institution
-  )
+  ) 
 ```
 
 # Publications
@@ -130,14 +161,16 @@ tribble(
 
 ```{r}
 tribble(
-  ~Year, ~Name, ~Duty,
-  '09/2017 - 12/2017', "EDUC 391: Educational Psychology and Human Development","Course design; weekly lectures; grading assignments and exams; office hours"
-) %>% 
-  detailed_entries(
-    where = Year,
-    with = Name, 
-    what = Duty
-  )
+  ~ Year,
+  ~ Name,
+  ~ Duty,
+  '09/2017 - 12/2017',
+  "EDUC 391: Educational Psychology and Human Development",
+  "Course design; weekly lectures; grading assignments and exams; office hours"
+) %>%
+  detailed_entries(where = Year,
+                   with = Name,
+                   what = Duty) 
 ```
 
 
@@ -145,36 +178,56 @@ tribble(
 
 ```{r}
 tribble(
-  ~Year, ~Name, ~Duty,
-  '01/2020 - 05/2020', "PSYCH 457 : Research in Educational and Cross-Cultural Settings", "Grading student essays; office hours; supervising student research projects",
-  '01/2019 - 04/2019',"PSYCH 457 : Research in Educational and Cross-Cultural Settings","Grading student essays; office hours; supervising student research projects",
-  '01/2018 - 04/2018', "PSYCH 111: Introduction to Psychology","Three review sessions per week; grading assignments and exams; office hours",
-  '01/2017 - 04/2017', "PSYCH 457 : Research in Educational and Cross-Cultural Settings","Grading student essays; office hours; supervising student research projects",
-  '09/2016 - 12/2016', "PSYCH 240: Intro to Cognitive Psychology","Three review sessions per week; grading assignments and exams; office hours",
-  '01/2016 - 04/2016', "PSYCH 457 : Research in Educational and Cross-Cultural Settings","Grading student essays; office hours; supervising student research projects"
-) %>% 
-  detailed_entries(
-    where = Year,
-    with = Name, 
-    what = Duty
-  )
+  ~ Year,
+  ~ Name,
+  ~ Duty,
+  '01/2020 - 05/2020',
+  "PSYCH 457 : Research in Educational and Cross-Cultural Settings",
+  "Grading student essays; office hours; supervising student research projects",
+  '01/2019 - 04/2019',
+  "PSYCH 457 : Research in Educational and Cross-Cultural Settings",
+  "Grading student essays; office hours; supervising student research projects",
+  '01/2018 - 04/2018',
+  "PSYCH 111: Introduction to Psychology",
+  "Three review sessions per week; grading assignments and exams; office hours",
+  '01/2017 - 04/2017',
+  "PSYCH 457 : Research in Educational and Cross-Cultural Settings",
+  "Grading student essays; office hours; supervising student research projects",
+  '09/2016 - 12/2016',
+  "PSYCH 240: Intro to Cognitive Psychology",
+  "Three review sessions per week; grading assignments and exams; office hours",
+  '01/2016 - 04/2016',
+  "PSYCH 457 : Research in Educational and Cross-Cultural Settings",
+  "Grading student essays; office hours; supervising student research projects"
+) %>%
+  detailed_entries(where = Year,
+                   with = Name,
+                   what = Duty) 
 ```
 
 ## Program Assistant
 
 ```{r}
 tribble(
-  ~Year, ~Name, ~Duty,
-  '05/2019',  "Global Course Connection: Beijing Normal University", "Supervising joint research projects between US and Chinese students; organizing student activities",
-  '05/2017', 'Global Course Connection: Beijing Normal University',  "Supervising joint research projects between US and Chinese students; organizing student activities",
-  '05/2016', "Global Course Connection: Beijing Normal University", "Supervising joint research projects between US and Chinese students; organizing student activities",
-  '05/2015', "Global Course Connections: Beijing Normal University", "Supervising joint research projects between US and Chinese students; organizing student activities"
-) %>% 
-  detailed_entries(
-    where = Year,
-    with = Name, 
-    what = Duty
-  )
+  ~ Year,
+  ~ Name,
+  ~ Duty,
+  '05/2019',
+  "Global Course Connection: Beijing Normal University",
+  "Supervising joint research projects between US and Chinese students; organizing student activities",
+  '05/2017',
+  'Global Course Connection: Beijing Normal University',
+  "Supervising joint research projects between US and Chinese students; organizing student activities",
+  '05/2016',
+  "Global Course Connection: Beijing Normal University",
+  "Supervising joint research projects between US and Chinese students; organizing student activities",
+  '05/2015',
+  "Global Course Connections: Beijing Normal University",
+  "Supervising joint research projects between US and Chinese students; organizing student activities"
+) %>%
+  detailed_entries(where = Year,
+                   with = Name,
+                   what = Duty) 
 ```
 
 # Professional Service
@@ -183,20 +236,29 @@ tribble(
 
 * Journal of Experimental Psychology: General
 * Memory & Cognition
+* NeuroImage
 
 # References
 
 ```{r}
 tribble(
-  ~Name, ~Title, ~Contact,
-  'John Jonides, Ph.D.',  "Edward E. Smith Professor of Psychology and Neuroscience; Co-Director, functional MRI Center, University of Michigan; Senior Editor, Psychological Science", "jjonides@umich.edu; 734-764-0192",
-  'Kevin F. Miller, Ph.D.',  "Professor of Psychology and Education,  University of Michigan", "kevinmil@umich.edu; 734-615-1800",
-  'Priti Shah, Ph.D.',  "Professor of Cognition & Cognitive Neuroscience and Educational Psychology, University of Michigan", "priti@umich.edu; 734-615-3745",
-  'Kai S. Cortina, Ph.D.',  "Professor of Psychology, University of Michigan", "schnabel@umich.edu; 734-615-3809"
-) %>% 
-  detailed_entries(
-    where = Contact,
-    with = Name, 
-    what = Title
-  )
+  ~ Name,
+  ~ Title,
+  ~ Contact,
+  'John Jonides, Ph.D.',
+  "Edward E. Smith Professor of Psychology and Neuroscience; Co-Director, functional MRI Center, University of Michigan; Senior Editor, Psychological Science",
+  "jjonides@umich.edu; 734-764-0192",
+  'Kevin F. Miller, Ph.D.',
+  "Professor of Psychology and Education,  University of Michigan",
+  "kevinmil@umich.edu; 734-615-1800",
+  'Priti Shah, Ph.D.',
+  "Professor of Cognition & Cognitive Neuroscience and Educational Psychology, University of Michigan",
+  "priti@umich.edu; 734-615-3745",
+  'Kai S. Cortina, Ph.D.',
+  "Professor of Psychology, University of Michigan",
+  "schnabel@umich.edu; 734-615-3809"
+) %>%
+  detailed_entries(where = Contact,
+                   with = Name,
+                   what = Title) 
 ```
