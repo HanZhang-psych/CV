@@ -17,10 +17,11 @@ output:
     keep_tex: yes
 csl: apa-cv.csl # change this if you want to use other citation styles
 bibliography_published: "Published.bib" # use separate .bib files and assign each of them a unique key: bibliography_*
-bibliography_underreview: "Under review.bib"
-bibliography_inprep: "In prep.bib"
+bibliography_books: "Book_chapters.bib"
+bibliography_inprogress: "In_progress.bib"
 bibliography_presentations: "Presentations.bib"
 nocite: '@*' # don't change this if you want to print out all the refs
+
 ---
 
 
@@ -53,7 +54,7 @@ tribble(
   "University of Michigan",
   "Ann Arbor, MI, USA",
   "Doctor of Philosophy, Combined Program in Education and Psychology",
-  "Advisors: Drs. Kevin Miller & Kai Cortina",
+  "Proquest Distinguished Dissertation Nomination",
   "09/2018-05/2020",
   "University of Michigan",
   "Ann Arbor, MI, USA",
@@ -103,7 +104,7 @@ tribble(
   ) 
 ```
 
-# Publications
+# Peer-reviewd Publications
 
 <!-- Notes: copy and paste the following block for any other bibliography sections with the same bibliography key matched that you assigned in YAML  -->
 \begingroup
@@ -118,29 +119,28 @@ tribble(
 
 
 
-# Manuscripts Under Review 
+# Work in Progress 
 
 \begingroup
 \setlength{\parindent}{-0.5in}
 \setlength{\leftskip}{0.5in}
 
-::: {#refs_underreview}
+::: {#refs_inprogress}
 :::
 
 \endgroup
 
 
-# Manuscripts In Preparation
+# Book Chapters
 
 \begingroup
 \setlength{\parindent}{-0.5in}
 \setlength{\leftskip}{0.5in}
 
-::: {#refs_inprep}
+::: {#refs_books}
 :::
 
 \endgroup
-
 
 
 # Selected Presentations
@@ -237,6 +237,7 @@ tribble(
 * Journal of Experimental Psychology: General
 * Memory & Cognition
 * NeuroImage
+* Visual Cognition
 
 # References
 
