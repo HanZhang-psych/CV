@@ -11,23 +11,16 @@ github: HanZhang-psych
 twitter: \_HanZhang_
 headcolor: 414141 # use black color
 date: "`r format(Sys.time(), '%B %Y')`"
+csl: apa-cv.csl # change this if you want to use other citation styles
 output: 
   vitae::awesomecv:
-    pandoc_args: ["--lua-filter=multiple-bibliographies.lua"] # used for creating bibliographies for multiple sections
-    keep_tex: yes
-csl: apa-cv.csl # change this if you want to use other citation styles
-bibliography_published: "Published.bib" # use separate .bib files and assign each of them a unique key: bibliography_*
-bibliography_books: "Book_chapters.bib"
-bibliography_inprogress: "In_progress.bib"
-bibliography_presentations: "Presentations.bib"
-nocite: '@*' # don't change this if you want to print out all the refs
-
+    pandoc_args: ["--lua-filter=lua/strong.lua"] 
 ---
-
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(vitae);library(tibble)
+#rmarkdown::pandoc_version()
 ```
 
 # Research Interests
@@ -50,11 +43,6 @@ tribble(
   "Ann Arbor, MI, USA",
   "Doctor of Philosophy, Combined Program in Education and Psychology",
   "Dissertation: Mind-wandering: What Can We Learn from Eye Movements?",
-  "09/2018-05/2020",
-  "University of Michigan",
-  "Ann Arbor, MI, USA",
-  "Doctor of Philosophy, Combined Program in Education and Psychology",
-  "Proquest Distinguished Dissertation Nomination",
   "09/2018-05/2020",
   "University of Michigan",
   "Ann Arbor, MI, USA",
@@ -82,78 +70,51 @@ tribble(
 
 ```{r}
 tribble(
-  ~Year, ~Name, ~Institution,
-  2019, "Rackham One-Term Dissertation Fellowship ($17417)", "University of Michigan",
-  2019, "Rackham Graduate Student Research Grant ($3000)", "University of Michigan",
-  2019, "Rackham Conference Travel Grant ($1050)","University of Michigan",
-  2018, "Rackham Summer Training Award ($3700)","University of Michigan",
-  2018, "Rackham Conference Travel Grant ($800)","University of Michigan",
-  2017, "Rackham Conference Travel Grant ($800)","University of Michigan",
-  2017, "Professor & Mrs. Cho-Yee To Travel Grant ($500)","University of Michigan",
-  2015, "Professor & Mrs. Cho-Yee To Travel Grant ($500)","University of Michigan",
-  2014, "China National Scholarship ($1500)","Ministry of Education of the People's Republic of China",
-  2014, "The First Rank Academic Scholarship ($300)","Beijing Normal University",
-  2013, "The First Rank Academic Scholarship ($300)","Beijing Normal University",
-  2013, "Beijing Student Research and Entrepreneurial Action Plan ($1500)","Beijing Municipal Commission of Education",
-  2012, "Undergraduate Student Research Grant ($280)","Beijing Normal University",
+  ~Year, ~Name, ~Institution, ~Supp, ~Amount,
+  '2020', 'Stanley E. and Ruth B. Dimond Best Dissertation Award', 'School of Education, University of Michigan', 'Dissertation: Mind-wandering: What Can We Learn from Eye Movements?', NA,
+  '2020', '2020 ProQuest Distinguished Dissertation Awards (Nomination)','School of Education, University of Michigan', 'Dissertation: Mind-wandering: What Can We Learn from Eye Movements?',NA,
+  '2019', "Rackham One-Term Dissertation Fellowship", "Rackham Graduate School, University of Michigan",NA,'$17417',
+  '2019', "Rackham Graduate Student Research Grant", "Rackham Graduate School, University of Michigan",NA,'$3000',
+  '2019, 2018, 2017', "Rackham Conference Travel Grant","Rackham Graduate School, University of Michigan",NA,'$1050',
+  '2018', "Rackham Summer Training Award","Rackham Graduate School, University of Michigan",NA,'$3700',
+  '2017, 2015', "Professor & Mrs. Cho-Yee To Travel Grant","School of Education, University of Michigan",NA, '$500',
+  '2014', "China National Scholarship","Ministry of Education of the People's Republic of China",NA, '$1500',
+  '2014, 2013', "The First Rank Academic Scholarship","Faculty of Psychology, Beijing Normal University",NA,'$300',
+  '2013', "Beijing Student Research and Entrepreneurial Action Plan","Beijing Municipal Commission of Education",NA,'$1500',
+  '2012', "Undergraduate Student Research Grant","Faculty of Psychology, Beijing Normal University",NA,'$280',
 ) %>% 
   detailed_entries(
     where = Year,
     with = Name, 
-    what = Institution
+    what = Institution,
+    why = Supp,
+    when = Amount
   ) 
 ```
 
 # Peer-reviewd Publications
 
-<!-- Notes: copy and paste the following block for any other bibliography sections with the same bibliography key matched that you assigned in YAML  -->
-\begingroup
-\setlength{\parindent}{-0.5in}
-\setlength{\leftskip}{0.5in}
-
-::: {#refs_published}
-:::
-
-\endgroup
-<!-- Bib-printing block ends here. -->
-
-
+```{r}
+bibliography_entries("Published.bib")
+```
 
 # Work in Progress 
 
-\begingroup
-\setlength{\parindent}{-0.5in}
-\setlength{\leftskip}{0.5in}
-
-::: {#refs_inprogress}
-:::
-
-\endgroup
-
+```{r}
+bibliography_entries("In_progress.bib")
+```
 
 # Book Chapters
 
-\begingroup
-\setlength{\parindent}{-0.5in}
-\setlength{\leftskip}{0.5in}
-
-::: {#refs_books}
-:::
-
-\endgroup
-
+```{r}
+bibliography_entries("Book_chapters.bib")
+```
 
 # Selected Presentations
 
-\begingroup
-\setlength{\parindent}{-0.5in}
-\setlength{\leftskip}{0.5in}
-
-::: {#refs_presentations}
-:::
-
-\endgroup
-
+```{r}
+bibliography_entries("Presentations.bib")
+```
 
 # Teaching Experience
 
@@ -238,6 +199,7 @@ tribble(
 * Memory & Cognition
 * NeuroImage
 * Visual Cognition
+* Scientific Studies of Reading
 
 # References
 
