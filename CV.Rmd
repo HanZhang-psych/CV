@@ -199,6 +199,7 @@ tribble(
 * Memory & Cognition
 * NeuroImage
 * Visual Cognition
+* Cognitive Science
 * Scientific Studies of Reading
 
 # References
