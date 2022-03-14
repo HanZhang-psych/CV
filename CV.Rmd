@@ -92,7 +92,7 @@ tribble(
   ) 
 ```
 
-# Peer-reviewd Publications
+# Peer-reviewed Publications
 
 ```{r}
 bibliography_entries("Published.bib")
