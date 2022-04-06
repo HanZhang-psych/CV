@@ -38,22 +38,22 @@ tribble(
   ~ Where,
   "Postdoctoral Research Fellow, Department of Psychology",
   "Advisor: Dr. John Jonides",
-  "05/2020-present",
+  "06/2020-present",
   "University of Michigan",
   "Ann Arbor, MI, USA",
-  "Doctor of Philosophy, Combined Program in Education and Psychology",
+  "Doctor of Philosophy, Education and Psychology",
   "Dissertation: Mind-wandering: What Can We Learn from Eye Movements?",
-  "09/2018-05/2020",
+  "09/2014-05/2020",
   "University of Michigan",
   "Ann Arbor, MI, USA",
-  "Master of Science, Combined Program in Education and Psychology",
+  "Master of Science, Psychology",
   NA,
-  "09/2014-05/2018",
+  "09/2014-04/2018",
   "University of Michigan",
   "Ann Arbor, MI, USA",
   "Bachelor of Science, Psychology",
   NA,
-  "09/2010-06/2014",
+  "09/2010-07/2014",
   "Beijing Normal University",
   "Beijing, China",
 ) %>%
@@ -98,16 +98,16 @@ tribble(
 bibliography_entries("Published.bib")
 ```
 
-# Work in Progress 
-
-```{r}
-bibliography_entries("In_progress.bib")
-```
-
 # Book Chapters
 
 ```{r}
 bibliography_entries("Book_chapters.bib")
+```
+
+# Work in Progress 
+
+```{r}
+bibliography_entries("In_progress.bib")
 ```
 
 # Selected Presentations
@@ -142,24 +142,24 @@ tribble(
   ~ Year,
   ~ Name,
   ~ Duty,
-  '01/2020 - 05/2020',
+  '01/2020 - 04/2020',
   "PSYCH 457 : Research in Educational and Cross-Cultural Settings",
-  "Grading student essays; office hours; supervising student research projects",
+  "Grading student essays and exams; office hours; supervising student research projects",
   '01/2019 - 04/2019',
   "PSYCH 457 : Research in Educational and Cross-Cultural Settings",
-  "Grading student essays; office hours; supervising student research projects",
+  "Grading student essays and exams; office hours; supervising student research projects",
   '01/2018 - 04/2018',
   "PSYCH 111: Introduction to Psychology",
   "Three review sessions per week; grading assignments and exams; office hours",
   '01/2017 - 04/2017',
   "PSYCH 457 : Research in Educational and Cross-Cultural Settings",
-  "Grading student essays; office hours; supervising student research projects",
+  "Grading student essays and exams; office hours; supervising student research projects",
   '09/2016 - 12/2016',
   "PSYCH 240: Intro to Cognitive Psychology",
   "Three review sessions per week; grading assignments and exams; office hours",
   '01/2016 - 04/2016',
   "PSYCH 457 : Research in Educational and Cross-Cultural Settings",
-  "Grading student essays; office hours; supervising student research projects"
+  "Grading student essays and exams; office hours; supervising student research projects"
 ) %>%
   detailed_entries(where = Year,
                    with = Name,
@@ -173,17 +173,8 @@ tribble(
   ~ Year,
   ~ Name,
   ~ Duty,
-  '05/2019',
+  '2015 - 2019',
   "Global Course Connection: Beijing Normal University",
-  "Supervising joint research projects between US and Chinese students; organizing student activities",
-  '05/2017',
-  'Global Course Connection: Beijing Normal University',
-  "Supervising joint research projects between US and Chinese students; organizing student activities",
-  '05/2016',
-  "Global Course Connection: Beijing Normal University",
-  "Supervising joint research projects between US and Chinese students; organizing student activities",
-  '05/2015',
-  "Global Course Connections: Beijing Normal University",
   "Supervising joint research projects between US and Chinese students; organizing student activities"
 ) %>%
   detailed_entries(where = Year,
@@ -195,12 +186,13 @@ tribble(
 
 ## Ad Hoc Reviewer
 
-* Journal of Experimental Psychology: General
 * Memory & Cognition
 * NeuroImage
 * Visual Cognition
 * Cognitive Science
 * Scientific Studies of Reading
+* Frontiers in Psychiatry
+* Psychological Research
 
 # References
 
