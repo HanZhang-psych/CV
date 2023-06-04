@@ -1,0 +1,461 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+%
+% Adapted to be an Rmarkdown template by Mitchell O'Hara-Wild
+% 23 November 2018
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt,a4paper,]{awesome-cv}
+
+% Configure page margins with geometry
+\usepackage{geometry}
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+
+\definecolor{awesome}{HTML}{414141}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\def\endfirstpage{\newpage}
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+
+\name{Han}{Zhang}
+
+\position{Postdoctoral Research Fellow}
+\address{Department of Psychology, University of Michigan}
+
+\email{\href{mailto:hanzh@umich.edu}{\nolinkurl{hanzh@umich.edu}}}
+\homepage{sites.lsa.umich.edu/hanzh}
+\googlescholar{ujW-lXkAAAAJ}
+\researchgate{Han\_Zhang175}
+\github{HanZhang-psych}
+\osf{nrtbk}
+\twitter{\_HanZhang\_}
+
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \skype{skype-id}
+% \reddit{reddit-id}
+
+
+\usepackage{booktabs}
+
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%------------------------------------------------------------------------------
+
+
+
+% Pandoc CSL macros
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{2em}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\honortitlestyle{#1}}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\honordatestyle{#1}}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+% 2019-02-14 Chris Umphlett - add flexibility to the document name in footer, rather than have it be static Curriculum Vitae
+\makecvfooter
+  {June 2023}
+    {Han Zhang~~~·~~~Curriculum Vitae}
+  {\thepage}
+
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%------------------------------------------------------------------------------
+
+
+
+\hypertarget{research-interests}{%
+\section{Research Interests}\label{research-interests}}
+
+Attention; distraction; mind-wandering; eye movements
+
+\hypertarget{education}{%
+\section{Education}\label{education}}
+
+\begin{cventries}
+    \cventry{Postdoctoral Research Fellow, Department of Psychology}{University of Michigan}{Ann Arbor, MI, USA}{06/2020-present}{\begin{cvitems}
+\item Advisor: Dr. John Jonides
+\end{cvitems}}
+    \cventry{Doctor of Philosophy, Education and Psychology}{University of Michigan}{Ann Arbor, MI, USA}{09/2014-05/2020}{\begin{cvitems}
+\item Dissertation: Mind-wandering: What Can We Learn from Eye Movements?
+\end{cvitems}}
+    \cventry{Master of Science, Psychology}{University of Michigan}{Ann Arbor, MI, USA}{09/2014-04/2018}{}\vspace{-4.0mm}
+    \cventry{Bachelor of Science, Psychology}{Beijing Normal University}{Beijing, China}{09/2010-07/2014}{}\vspace{-4.0mm}
+\end{cventries}
+
+\hypertarget{awards-and-grants}{%
+\section{Awards and Grants}\label{awards-and-grants}}
+
+\hypertarget{since-postdoc}{%
+\subsection{Since Postdoc}\label{since-postdoc}}
+
+\begin{cventries}
+    \cventry{Standard Grant, National Science Foundation}{Probing attentional allocation with a novel forced-response method}{2023}{\$659,877}{\begin{cvitems}
+\item Role: Key Personnel (Postdoc)
+\end{cvitems}}
+    \cventry{R21, National Institute of Mental Health}{Investigating interference-control in ADHD using a novel forced-response method}{2023}{\$429,000}{\begin{cvitems}
+\item Role: Key Personnel (Postdoc)
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{before-postdoc}{%
+\subsection{Before Postdoc}\label{before-postdoc}}
+
+\begin{cventries}
+    \cventry{School of Education, University of Michigan}{Stanley E. and Ruth B. Dimond Best Dissertation Award}{2020}{\$500}{\begin{cvitems}
+\item Dissertation: Mind-wandering: What Can We Learn from Eye Movements?
+\end{cvitems}}
+    \cventry{School of Education, University of Michigan}{2020 ProQuest Distinguished Dissertation Awards (Nomination)}{2020}{}{}\vspace{-4.0mm}
+    \cventry{Rackham Graduate School, University of Michigan}{Rackham One-Term Dissertation Fellowship}{2019}{\$17417}{}\vspace{-4.0mm}
+    \cventry{Rackham Graduate School, University of Michigan}{Rackham Graduate Student Research Grant}{2019}{\$3000}{}\vspace{-4.0mm}
+    \cventry{Rackham Graduate School, University of Michigan}{Rackham Conference Travel Grant}{2019, 2018, 2017}{\$1050}{}\vspace{-4.0mm}
+    \cventry{Rackham Graduate School, University of Michigan}{Rackham Summer Training Award}{2018}{\$3700}{}\vspace{-4.0mm}
+    \cventry{School of Education, University of Michigan}{Professor \& Mrs. Cho-Yee To Travel Grant}{2017, 2015}{\$500}{}\vspace{-4.0mm}
+    \cventry{Ministry of Education of the People's Republic of China}{China National Scholarship}{2014}{\$1500}{}\vspace{-4.0mm}
+    \cventry{Faculty of Psychology, Beijing Normal University}{The First Rank Academic Scholarship}{2014, 2013}{\$300}{}\vspace{-4.0mm}
+    \cventry{Beijing Municipal Commission of Education}{Beijing Student Research and Entrepreneurial Action Plan}{2013}{\$1500}{}\vspace{-4.0mm}
+    \cventry{Faculty of Psychology, Beijing Normal University}{Undergraduate Student Research Grant}{2012}{\$280}{}\vspace{-4.0mm}
+\end{cventries}
+
+\hypertarget{peer-reviewed-articles}{%
+\section{Peer-reviewed Articles}\label{peer-reviewed-articles}}
+
+\hypertarget{bibliography}{}
+\leavevmode\vadjust pre{\hypertarget{ref-zhang_scene_2021}{}}%
+\textbf{Zhang, H.}, Anderson, N. C., \& Miller, K. F. (2021). Scene
+meaningfulness guides eye movements even during mind-wandering.
+\emph{Attention, Perception, \& Psychophysics}.
+\url{https://doi.org/10.3758/s13414-021-02370-6}
+
+\leavevmode\vadjust pre{\hypertarget{ref-zhang_malleability_2021}{}}%
+\textbf{Zhang, H.}, Abagis, T. R., \& Jonides, J. (2021). The
+malleability of attentional capture. \emph{Visual Cognition}.
+\url{https://doi.org/10.1080/13506285.2021.1915903}
+
+\leavevmode\vadjust pre{\hypertarget{ref-zhang_pre-trial_2021}{}}%
+\textbf{Zhang, H.}, \& Jonides, J. (2021). Pre-trial gaze stability
+predicts momentary slips of attention. \emph{EMICS '21}. ACM CHI '21
+workshop on eye movements as an interface to cognitive state.
+\url{https://psyarxiv.com/bv2uc/}
+
+\leavevmode\vadjust pre{\hypertarget{ref-zhang_refixation_2020}{}}%
+\textbf{Zhang, H.}, Anderson, N. C., \& Miller, K. F. (2020). Refixation
+patterns of mind-wandering during real-world scene perception.
+\emph{Journal of Experimental Psychology: Human Perception and
+Performance}, \emph{47}(1), 36--52.
+\url{https://doi.org/10.1037/xhp0000877}
+
+\leavevmode\vadjust pre{\hypertarget{ref-zhang_wandering_2020}{}}%
+\textbf{Zhang, H.}, Miller, K. F., Sun, X., \& Cortina, K. S. (2020).
+Wandering eyes: Eye movements during mind wandering in video lectures.
+\emph{Applied Cognitive Psychology}, \emph{34}(2), 449--464.
+\url{https://doi.org/10.1002/acp.3632}
+
+\leavevmode\vadjust pre{\hypertarget{ref-zhang_missing_2020}{}}%
+\textbf{Zhang, H.}, Qu, C., Miller, K. F., \& Cortina, K. S. (2020).
+Missing the joke: Reduced rereading of garden-path jokes during
+mind-wandering. \emph{Journal of Experimental Psychology: Learning,
+Memory, and Cognition}, \emph{46}(4), 638--648.
+\url{https://doi.org/10.1037/xlm0000745}
+
+\leavevmode\vadjust pre{\hypertarget{ref-zhang_how_2018}{}}%
+\textbf{Zhang, H.}, Miller, K. F., Cleveland, R., \& Cortina, K. S.
+(2018). How listening to music affects reading: Evidence from eye
+tracking. \emph{Journal of Experimental Psychology: Learning, Memory,
+and Cognition}, \emph{44}(11), 1778--1791.
+\url{https://doi.org/10.1037/xlm0000544}
+
+\hypertarget{book-chapters}{%
+\section{Book Chapters}\label{book-chapters}}
+
+\hypertarget{bibliography}{}
+\leavevmode\vadjust pre{\hypertarget{ref-michal_cognitive_2021}{}}%
+Michal, A., Fansher, M., Xin, S., \textbf{Zhang, H.}, \& Shah, P.
+(2021). Cognitive development: Methods and illustrative examples. In
+\emph{The oxford handbook of educational psychology}. Oxford University
+Press.
+
+\hypertarget{under-review}{%
+\section{Under Review}\label{under-review}}
+
+\hypertarget{bibliography}{}
+\leavevmode\vadjust pre{\hypertarget{ref-adkins_what_2023}{}}%
+Adkins, T. J., \textbf{Zhang, H.}, Jonides, J., \& Lee, T. G. (2023).
+\emph{What happens after an error?} BioArXiv.
+\url{https://doi.org/10.1101/2022.03.17.484792}
+
+\leavevmode\vadjust pre{\hypertarget{ref-lee_forced-response_2023}{}}%
+Lee, T. G., Sellers, J., Jonides, J., \& \textbf{Zhang, H.} (2023).
+\emph{The forced-response method: A new chronometric approach to measure
+conflict processing}. PsyArXiv.
+\url{https://doi.org/10.31234/osf.io/byzqf}
+
+\leavevmode\vadjust pre{\hypertarget{ref-osborne_association_2023}{}}%
+Osborne, J., \textbf{Zhang, H.}, Carlson, M., Shah, P., \& Jonides, J.
+(2023). \emph{The association between different sources of distraction
+and symptoms of attention deficit hyperactivity disorder.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-zhang_lingering_2023}{}}%
+\textbf{Zhang, H.}, Abagis, T. R., Steeby, C. J., \& Jonides, J. (2023).
+\emph{Lingering on distraction: Examining distractor rejection in adults
+with ADHD}. PsyArXiv. \url{https://doi.org/10.31234/osf.io/cqe34}
+
+\leavevmode\vadjust pre{\hypertarget{ref-zhang_does_2023}{}}%
+\textbf{Zhang, H.}, Miller, K. F., \& Jonides, J. (2023). \emph{Does
+mind-wandering affect distractor suppression?} PsyArXiv.
+\url{https://doi.org/10.31234/osf.io/2h6kw}
+
+\leavevmode\vadjust pre{\hypertarget{ref-zhang_d_2023}{}}%
+\textbf{Zhang, H.}, Miyake, A., Shah, P., \& Jonides, J. (2023). \emph{A
+d factor? Understanding individual differences in distractibility}.
+PsyArXiv. \url{https://doi.org/10.31234/osf.io/5nzs2}
+
+\leavevmode\vadjust pre{\hypertarget{ref-zhang_association_2023}{}}%
+\textbf{Zhang, H.}, Xin, S., \& Miyake, A. (2023). \emph{On the
+association between the self-control scale and social desirability
+measures: A meta-analysis and systematic review}. PsyArXiv.
+\url{https://doi.org/10.31234/osf.io/j4vy8}
+
+\hypertarget{selected-presentations}{%
+\section{Selected Presentations}\label{selected-presentations}}
+
+\hypertarget{bibliography}{}
+\leavevmode\vadjust pre{\hypertarget{ref-zhang_pm_2022}{}}%
+\textbf{Zhang, H.}, Adkins, T., Lee, T., \& Jonides, J. (2022,
+November). \emph{How does the priority map change over time?} Oral
+presentation at the psychonomic society's 63nd annual meeting.
+
+\leavevmode\vadjust pre{\hypertarget{ref-zhang_uncovering_2021}{}}%
+\textbf{Zhang, H.}, Miyake, A., Shah, P., \& Jonides, J. (2021,
+November). \emph{Uncovering the structure of individual differences in
+distractibility}. Oral presentation at the psychonomic society's 62nd
+annual meeting.
+
+\leavevmode\vadjust pre{\hypertarget{ref-zhang_mind-wandering_2020}{}}%
+\textbf{Zhang, H.}, Anderson, N. C., \& Miller, K. F. (2020, November).
+\emph{Mind-wandering during scene perception: On the role of meaning and
+salience}. Poster presented at the psychonomic society's 61st annual
+meeting.
+
+\leavevmode\vadjust pre{\hypertarget{ref-zhang_scan-paths_2020}{}}%
+\textbf{Zhang, H.}, Anderson, N. C., \& Miller, K. F. (2020, April).
+\emph{Scan-paths of mind-wandering during real-world scene perception}.
+The 92nd annual meeting of the midwestern psychological association
+(conference canceled due to covid-19).
+
+\leavevmode\vadjust pre{\hypertarget{ref-zhang_reduced_2019}{}}%
+\textbf{Zhang, H.}, Qu, C., Miller, K. F., \& Cortina, K. S. (2019,
+November). \emph{Reduced re-reading of garden-path jokes during mindless
+reading}. Poster presented at the psychonomic society's 60th annual
+meeting.
+
+\leavevmode\vadjust pre{\hypertarget{ref-zhang_mind-wandering_2019}{}}%
+\textbf{Zhang, H.}, Miller, K. F., Cortina, K. S., \& Jiang, T. (2019,
+June). \emph{Mind-wandering in college classrooms: A mobile eye-tracking
+study}. Poster presented at SARMAC XIII.
+
+\leavevmode\vadjust pre{\hypertarget{ref-fischer_examining_2019}{}}%
+Fischer, A., \& \textbf{Zhang, H.} (2019, May). \emph{Examining the
+effect of word predictability during mindless reading}. Poster presented
+at the association for psychological science annual meeting.
+
+\leavevmode\vadjust pre{\hypertarget{ref-zhang_what_2019}{}}%
+\textbf{Zhang, H.}, \& Shah, P. (2019, May). \emph{What can iPhone's
+screen time tell about your cognitive functioning?} Poster presented at
+the association for psychological science annual meeting.
+
+\leavevmode\vadjust pre{\hypertarget{ref-zhang_mind-wandering_2019-1}{}}%
+\textbf{Zhang, H.} (2019, April). \emph{Mind-wandering: What can we
+learn from eye-movements?} Oral presentation at the combined program in
+education and psychology brownbag.
+
+\leavevmode\vadjust pre{\hypertarget{ref-zhang_scan-paths_2019}{}}%
+\textbf{Zhang, H.}, Miller, K. F., \& Sun, X. (2019, March).
+\emph{Scan-paths of mind-wandering during video lectures}. Poster
+presented at the international convention of psychological science.
+
+\leavevmode\vadjust pre{\hypertarget{ref-zhang_how_2018}{}}%
+\textbf{Zhang, H.}, \& Miller, K. F. (2018, November). \emph{How
+irrelevant speech affects reading: The role of word predictability}.
+Poster presented at the psychonomic society's 59th annual meeting.
+
+\leavevmode\vadjust pre{\hypertarget{ref-qu_all_2018}{}}%
+Qu, C., \& \textbf{Zhang, H.} (2018, May). \emph{All joking aside:
+Mind-wandering impairs processing of garden-path jokes}. Poster
+presented at the association for psychological science annual meeting.
+
+\leavevmode\vadjust pre{\hypertarget{ref-zhang_wandering_2018}{}}%
+\textbf{Zhang, H.}, Miller, K. F., \& Sun, X. (2018, May). \emph{The
+wandering eyes: Mind-wandering during video lectures is associated with
+oculomotor behaviors}. Poster presented at the association for
+psychological science annual meeting.
+
+\leavevmode\vadjust pre{\hypertarget{ref-zhang_how_2016}{}}%
+\textbf{Zhang, H.}, Miller, K. F., Cleveland, R., \& Cortina, K. S.
+(2016, May). \emph{How listening to music affects reading: Evidence from
+eye tracking}. Poster presented at the association for psychological
+science annual meeting.
+
+\hypertarget{teaching-experience}{%
+\section{Teaching Experience}\label{teaching-experience}}
+
+\hypertarget{primary-instructor}{%
+\subsection{Primary Instructor}\label{primary-instructor}}
+
+\begin{cventries}
+    \cventry{Course design; weekly lectures; grading assignments and exams; office hours}{EDUC 391: Educational Psychology and Human Development}{09/2017 - 12/2017}{}{}\vspace{-4.0mm}
+\end{cventries}
+
+\hypertarget{graduate-student-instructor}{%
+\subsection{Graduate Student
+Instructor}\label{graduate-student-instructor}}
+
+\begin{cventries}
+    \cventry{Grading student essays and exams; office hours; supervising student research projects}{PSYCH 457 : Research in Educational and Cross-Cultural Settings}{01/2020 - 04/2020}{}{}\vspace{-4.0mm}
+    \cventry{Grading student essays and exams; office hours; supervising student research projects}{PSYCH 457 : Research in Educational and Cross-Cultural Settings}{01/2019 - 04/2019}{}{}\vspace{-4.0mm}
+    \cventry{Three review sessions per week; grading assignments and exams; office hours}{PSYCH 111: Introduction to Psychology}{01/2018 - 04/2018}{}{}\vspace{-4.0mm}
+    \cventry{Grading student essays and exams; office hours; supervising student research projects}{PSYCH 457 : Research in Educational and Cross-Cultural Settings}{01/2017 - 04/2017}{}{}\vspace{-4.0mm}
+    \cventry{Three review sessions per week; grading assignments and exams; office hours}{PSYCH 240: Intro to Cognitive Psychology}{09/2016 - 12/2016}{}{}\vspace{-4.0mm}
+    \cventry{Grading student essays and exams; office hours; supervising student research projects}{PSYCH 457 : Research in Educational and Cross-Cultural Settings}{01/2016 - 04/2016}{}{}\vspace{-4.0mm}
+\end{cventries}
+
+\hypertarget{program-assistant}{%
+\subsection{Program Assistant}\label{program-assistant}}
+
+\begin{cventries}
+    \cventry{Supervising joint research projects between US and Chinese students; organizing student activities}{Global Course Connection: Beijing Normal University}{2015 - 2019}{}{}\vspace{-4.0mm}
+\end{cventries}
+
+\hypertarget{grant-writing-experience}{%
+\section{Grant-writing Experience}\label{grant-writing-experience}}
+
+\begin{cventries}
+    \cventry{R21, National Institute of Mental Health}{Investigating interference-control in ADHD using a novel forced-response method}{2022}{Funded}{\begin{cvitems}
+\item Role: Conceptualiation; original draft preparation; formal analysis; reviewing \& editing
+\end{cvitems}}
+    \cventry{National Science Foundation}{Probing attentional allocation with a novel forced-response method}{2022}{Funded}{\begin{cvitems}
+\item Role: Conceptualiation; original draft preparation; formal analysis; reviewing \& editing
+\end{cvitems}}
+    \cventry{Merck Investigator Studies Program}{Testing the efficacy of interactive decision aids on vaccine attitudes and uptake using a Bayesian precision estimates}{2022}{Pending}{\begin{cvitems}
+\item Role: reviewing \& editing
+\end{cvitems}}
+    \cventry{National Science Foundation}{Uncovering mechanisms of interference-resolution with a novel forced-response method}{2022}{Not Funded}{\begin{cvitems}
+\item Role: Conceptualiation; original draft preparation; formal analysis; reviewing \& editing
+\end{cvitems}}
+    \cventry{National Science Foundation}{Dissecting Distractibility by the Capture of Attention}{2021}{Not Funded}{\begin{cvitems}
+\item Role: Original draft preparation; formal analysis; reviewing \& editing
+\end{cvitems}}
+    \cventry{National Science Foundation}{Mitigating distraction from external and internal sources}{2020}{Not Funded}{\begin{cvitems}
+\item Role: Original draft preparation; formal analysis; reviewing \& editing
+\end{cvitems}}
+    \cventry{R01, National Institute of Mental Health}{Failure to resist external and internal distraction in ADHD}{2019}{Not Funded}{\begin{cvitems}
+\item Role: Formal analysis; original draft preparation; reviewing \& editing
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{professional-service}{%
+\section{Professional Service}\label{professional-service}}
+
+\hypertarget{ad-hoc-reviewer}{%
+\subsection{Ad Hoc Reviewer}\label{ad-hoc-reviewer}}
+
+\begin{itemize}
+\tightlist
+\item
+  Memory \& Cognition
+\item
+  NeuroImage
+\item
+  Visual Cognition
+\item
+  Cognitive Science
+\item
+  Scientific Studies of Reading
+\item
+  Frontiers in Psychiatry
+\item
+  Psychological Research
+\item
+  Cognition
+\item
+  Scientific Reports
+\end{itemize}
+
+\hypertarget{references}{%
+\section{References}\label{references}}
+
+\begin{cventries}
+    \cventry{Edward E. Smith Professor of Psychology and Neuroscience; Co-Director, functional MRI Center, University of Michigan; Senior Editor, Psychological Science}{John Jonides, Ph.D.}{jjonides@umich.edu; 734-764-0192}{}{}\vspace{-4.0mm}
+    \cventry{Professor of Psychology and Education,  University of Michigan}{Kevin F. Miller, Ph.D.}{kevinmil@umich.edu; 734-615-1800}{}{}\vspace{-4.0mm}
+    \cventry{Professor of Cognition \& Cognitive Neuroscience and Educational Psychology, University of Michigan}{Priti Shah, Ph.D.}{priti@umich.edu; 734-615-3745}{}{}\vspace{-4.0mm}
+    \cventry{Professor of Psychology, University of Michigan}{Kai S. Cortina, Ph.D.}{schnabel@umich.edu; 734-615-3809}{}{}\vspace{-4.0mm}
+\end{cventries}
+
+
+
+\end{document}

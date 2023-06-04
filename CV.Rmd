@@ -5,17 +5,21 @@ position: "Postdoctoral Research Fellow"
 address: "Department of Psychology, University of Michigan"
 www: sites.lsa.umich.edu/hanzh
 email: "hanzh@umich.edu"
-#orcid: 0000-0001-6087-0428
-researchgate: Han_Zhang175
+#to get the orcid: 0000-0001-6087-0428
+googlescholar: ujW-lXkAAAAJ
+osf: nrtbk # currently vitae doesn't support osf in the yaml header, need to add \osf{nrtbk} in the .tex file manulaly
 github: HanZhang-psych
 twitter: \_HanZhang_
+researchgate: Han_Zhang175
 headcolor: 414141 # use black color
 date: "`r format(Sys.time(), '%B %Y')`"
 csl: apa-cv.csl # change this if you want to use other citation styles
 output: 
   vitae::awesomecv:
-    pandoc_args: ["--lua-filter=lua/strong.lua"] 
+    keep_tex: true
+    pandoc_args: ["--lua-filter=lua/strong.lua"]
 ---
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
@@ -68,11 +72,42 @@ tribble(
 
 # Awards and Grants
 
+## Since Postdoc
+
+```{r}
+tribble(
+  ~ Year,
+  ~ Name,
+  ~ Institution,
+  ~ Supp,
+  ~ Amount,
+  '2023',
+  'Probing attentional allocation with a novel forced-response method',
+  'Standard Grant, National Science Foundation',
+  'Role: Key Personnel (Postdoc)',
+  '$659,877',
+  '2023',
+  'Investigating interference-control in ADHD using a novel forced-response method',
+  'R21, National Institute of Mental Health',
+  'Role: Key Personnel (Postdoc)',
+  '$429,000',
+) %>%
+  detailed_entries(
+    where = Year,
+    with = Name,
+    what = Institution,
+    why = Supp,
+    when = Amount
+  ) 
+```
+
+## Before Postdoc
+
 ```{r}
 tribble(
   ~Year, ~Name, ~Institution, ~Supp, ~Amount,
-  '2020', 'Stanley E. and Ruth B. Dimond Best Dissertation Award', 'School of Education, University of Michigan', 'Dissertation: Mind-wandering: What Can We Learn from Eye Movements?', NA,
-  '2020', '2020 ProQuest Distinguished Dissertation Awards (Nomination)','School of Education, University of Michigan', 'Dissertation: Mind-wandering: What Can We Learn from Eye Movements?',NA,
+  '2020', 'Stanley E. and Ruth B. Dimond Best Dissertation Award', 'School of Education, University of Michigan', 'Dissertation: Mind-wandering: What Can We Learn from Eye Movements?', '$500',
+  '2020', '2020 ProQuest Distinguished Dissertation Awards (Nomination)','School of Education, University of Michigan', NA ,NA,
   '2019', "Rackham One-Term Dissertation Fellowship", "Rackham Graduate School, University of Michigan",NA,'$17417',
   '2019', "Rackham Graduate Student Research Grant", "Rackham Graduate School, University of Michigan",NA,'$3000',
   '2019, 2018, 2017', "Rackham Conference Travel Grant","Rackham Graduate School, University of Michigan",NA,'$1050',
@@ -92,7 +127,7 @@ tribble(
   ) 
 ```
 
-# Peer-reviewed Publications
+# Peer-reviewed Articles
 
 ```{r}
 bibliography_entries("Published.bib")
@@ -104,10 +139,10 @@ bibliography_entries("Published.bib")
 bibliography_entries("Book_chapters.bib")
 ```
 
-# Work in Progress 
+# Under Review
 
 ```{r}
-bibliography_entries("In_progress.bib")
+bibliography_entries("Under_review.bib")
 ```
 
 # Selected Presentations
@@ -133,7 +168,6 @@ tribble(
                    with = Name,
                    what = Duty) 
 ```
-
 
 ## Graduate Student Instructor
 
@@ -182,17 +216,74 @@ tribble(
                    what = Duty) 
 ```
 
+# Grant-writing Experience
+
+```{r}
+tribble(
+  ~ Year,
+  ~ Name,
+  ~ Institution,
+  ~ Supp,
+  ~ Outcome,
+  '2022',
+  'Investigating interference-control in ADHD using a novel forced-response method',
+  'R21, National Institute of Mental Health',
+  'Role: Conceptualiation; original draft preparation; formal analysis; reviewing & editing',
+  'Funded',
+  '2022',
+  'Probing attentional allocation with a novel forced-response method',
+  'National Science Foundation',
+  'Role: Conceptualiation; original draft preparation; formal analysis; reviewing & editing',
+  'Funded',
+  '2022',
+  'Testing the efficacy of interactive decision aids on vaccine attitudes and uptake using a Bayesian precision estimates',
+  'Merck Investigator Studies Program',
+  'Role: reviewing & editing',
+  'Pending',
+  '2022',
+  'Uncovering mechanisms of interference-resolution with a novel forced-response method',
+  'National Science Foundation',
+  'Role: Conceptualiation; original draft preparation; formal analysis; reviewing & editing',
+  'Not Funded',
+  '2021',
+  'Dissecting Distractibility by the Capture of Attention',
+  'National Science Foundation',
+  'Role: Original draft preparation; formal analysis; reviewing & editing',
+  'Not Funded',
+  '2020',
+  'Mitigating distraction from external and internal sources',
+  'National Science Foundation',
+  'Role: Original draft preparation; formal analysis; reviewing & editing',
+  'Not Funded',
+  '2019',
+  'Failure to resist external and internal distraction in ADHD',
+  'R01, National Institute of Mental Health',
+  'Role: Formal analysis; original draft preparation; reviewing & editing',
+  'Not Funded'
+) %>%
+  detailed_entries(
+    where = Year,
+    with = Name,
+    what = Institution,
+    why = Supp,
+    when = Outcome
+  ) 
+```
+
+
 # Professional Service
 
 ## Ad Hoc Reviewer
 
-* Memory & Cognition
-* NeuroImage
-* Visual Cognition
-* Cognitive Science
-* Scientific Studies of Reading
-* Frontiers in Psychiatry
-* Psychological Research
+-   Memory & Cognition
+-   NeuroImage
+-   Visual Cognition
+-   Cognitive Science
+-   Scientific Studies of Reading
+-   Frontiers in Psychiatry
+-   Psychological Research
+-   Cognition
+-   Scientific Reports
 
 # References
 

@@ -75,9 +75,9 @@
 % Needed to use icons from font-awesome
 % (https://github.com/posquit0/latex-fontawesome)
 \defaultfontfeatures{Extension = .otf}
-\RequirePackage{fontawesome}
+\RequirePackage{fontawesome5}
 % Add support of academia icons
-\usepackage{academicons}
+\RequirePackage{academicons}
 \RequirePackage[default,opentype]{sourcesanspro}
 % Needed for the photo ID
 \RequirePackage[skins]{tcolorbox}
@@ -292,6 +292,10 @@
 % Usage: \orcid{<orcid>}
 \newcommand*{\orcid}[1]{\def\@orcid{#1}}
 
+% Defines writer's OSF (optional) #HZ 20230604: added OSF account
+% Usage: \osf{<osf>}
+\newcommand*{\osf}[1]{\def\@osf{#1}}
+
 % Defines writer's Publons account (optional)
 % Usage: \publons{<publons>}
 \newcommand*{\publons}[1]{\def\@publons{#1}}
@@ -477,7 +481,9 @@
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://orcid.org/\@orcid}{\aiOrcidSquare\acvHeaderIconSep\@orcid}%
+          % HZ 06042023: use light icon
+          %\href{https://orcid.org/\@orcid}{\aiOrcidSquare\acvHeaderIconSep\@orcid}%
+          \href{https://orcid.org/\@orcid}{\aiOrcid\acvHeaderIconSep\@orcid}%
         }%
       \ifthenelse{\isundefined{\@publons}}%
         {}%
@@ -489,20 +495,33 @@
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://scholar.google.com/citations?user=\@googlescholar}{\aiGoogleScholarSquare\acvHeaderIconSep\@googlescholar}%
+          %HZ 06042023: display name instead of google scholar id, same below
+          %\href{https://scholar.google.com/citations?user=\@googlescholar}{\aiGoogleScholarSquare\acvHeaderIconSep\@googlescholar}%
+          \href{https://scholar.google.com/citations?user=\@googlescholar}{\aiGoogleScholar\acvHeaderIconSep Google Scholar}%
         }%
       \ifthenelse{\isundefined{\@researchgate}}%
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://www.researchgate.net/profile/\@researchgate}{\aiResearchGateSquare\acvHeaderIconSep\@researchgate}%
+          % HZ 06042023: use light icon
+          %\href{https://www.researchgate.net/profile/\@researchgate}{\aiResearchGateSquare\acvHeaderIconSep Research Gate}%
+          \href{https://www.researchgate.net/profile/\@researchgate}{\aiResearchGate\acvHeaderIconSep RG}%
         }%
       \ifthenelse{\isundefined{\@github}}%
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://github.com/\@github}{\faGithubSquare\acvHeaderIconSep\@github}%
+          % HZ 06042023: use light icon
+          %\href{https://github.com/\@github}{\faGithubSquare\acvHeaderIconSep Github}%
+          \href{https://github.com/\@github}{\faGithub\acvHeaderIconSep Github}%
         }%
+      % HZ 06042023: added OSF support
+      \ifthenelse{\isundefined{\@osf}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://osf.io/\@osf}{\aiOSF\acvHeaderIconSep OSF}%
+        }%                
       \ifthenelse{\isundefined{\@gitlab}}%
         {}%
         {%
@@ -525,7 +544,7 @@
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://twitter.com/\@twitter}{\faTwitter\acvHeaderIconSep\@twitter}%
+          \href{https://twitter.com/\@twitter}{\faTwitter\acvHeaderIconSep Twitter}%
         }%
       \ifthenelse{\isundefined{\@skype}}%
         {}%
