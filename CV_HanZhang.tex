@@ -88,8 +88,8 @@
 \newlength{\cslhangindent}
 \setlength{\cslhangindent}{1.5em}
 \newlength{\csllabelwidth}
-\setlength{\csllabelwidth}{3em}
-\newenvironment{CSLReferences}[3] % #1 hanging-ident, #2 entry spacing
+\setlength{\csllabelwidth}{2em}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
  {% don't indent paragraphs
   \setlength{\parindent}{0pt}
   % turn on hanging indent if param 1 is 1
@@ -102,8 +102,8 @@
  {}
 \usepackage{calc}
 \newcommand{\CSLBlock}[1]{#1\hfill\break}
-\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
-\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\honortitlestyle{#1}}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\honordatestyle{#1}}}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 \begin{document}
@@ -116,7 +116,7 @@
 % Leave any of these blank if they are not needed
 % 2019-02-14 Chris Umphlett - add flexibility to the document name in footer, rather than have it be static Curriculum Vitae
 \makecvfooter
-  {July 2023}
+  {December 2023}
     {Han Zhang~~~·~~~Curriculum Vitae}
   {\thepage}
 
@@ -185,6 +185,13 @@ Attention; distraction; mind-wandering; eye movements
 \section{Peer-reviewed Articles}\label{peer-reviewed-articles}}
 
 \hypertarget{bibliography}{}
+\leavevmode\vadjust pre{\hypertarget{ref-zhang_d_2023}{}}%
+\textbf{Zhang, H.}, Miyake, A., Osborne, J., Shah, P., \& Jonides, J.
+(2023). A d factor? Understanding trait distractibility and its
+relationships with ADHD symptomatology and hyperfocus. \emph{PLOS ONE},
+\emph{18}(10), e0292215.
+\url{https://doi.org/10.1371/journal.pone.0292215}
+
 \leavevmode\vadjust pre{\hypertarget{ref-osborne_association_2023}{}}%
 Osborne, J. B., \textbf{Zhang, H.}, Carlson, M., Shah, P., \& Jonides,
 J. (2023). The association between different sources of distraction and
@@ -212,14 +219,13 @@ meaningfulness guides eye movements even during mind-wandering.
 \url{https://doi.org/10.3758/s13414-021-02370-6}
 
 \leavevmode\vadjust pre{\hypertarget{ref-zhang_pre-trial_2021}{}}%
-\textbf{Zhang, H.}, \& Jonides, J. (2021). Pre-trial gaze stability
-predicts momentary slips of attention. \emph{EMICS '21}. ACM CHI '21
-workshop on eye movements as an interface to cognitive state.
+\textbf{Zhang, H.}, \& Jonides, J. (2021). Pre-trial Gaze Stability
+Predicts Momentary Slips of Attention. \emph{EMICS '21}.
 \url{https://psyarxiv.com/bv2uc/}
 
 \leavevmode\vadjust pre{\hypertarget{ref-zhang_refixation_2020}{}}%
 \textbf{Zhang, H.}, Anderson, N. C., \& Miller, K. F. (2020). Refixation
-patterns of mind-wandering during real-world scene perception.
+Patterns of Mind-wandering during Real-world Scene Perception.
 \emph{Journal of Experimental Psychology: Human Perception and
 Performance}, \emph{47}(1), 36--52.
 \url{https://doi.org/10.1037/xhp0000877}
@@ -286,10 +292,10 @@ with ADHD}. PsyArXiv. \url{https://doi.org/10.31234/osf.io/cqe34}
 mind-wandering affect distractor suppression?} PsyArXiv.
 \url{https://doi.org/10.31234/osf.io/2h6kw}
 
-\leavevmode\vadjust pre{\hypertarget{ref-zhang_d_2023}{}}%
-\textbf{Zhang, H.}, Miyake, A., Shah, P., \& Jonides, J. (2023). \emph{A
-d factor? Understanding individual differences in distractibility}.
-PsyArXiv. \url{https://doi.org/10.31234/osf.io/5nzs2}
+\leavevmode\vadjust pre{\hypertarget{ref-zhang_temporal_2023}{}}%
+\textbf{Zhang, H.}, Sellers, J., Lee, T. G., \& Jonides, J. (2023).
+\emph{The Temporal Dynamics of Visual Attention}. PsyArXiv.
+\url{https://doi.org/10.31234/osf.io/e4ktq}
 
 \leavevmode\vadjust pre{\hypertarget{ref-zhang_association_2023}{}}%
 \textbf{Zhang, H.}, Xin, S., \& Miyake, A. (2023). \emph{On the
@@ -301,11 +307,17 @@ measures: A meta-analysis and systematic review}. PsyArXiv.
 \section{Selected Presentations}\label{selected-presentations}}
 
 \hypertarget{bibliography}{}
+\leavevmode\vadjust pre{\hypertarget{ref-zhang_modeling_2023}{}}%
+\textbf{Zhang, H.}, Sellers, J., Lee, T., \& Jonides, J. (2023,
+November). \emph{Modeling the temporal dynamics of visual attention}.
+{[}Talk session{]}. The psychonomic society's 64nd annual meeting. San
+francisco, CA, USA.
+
 \leavevmode\vadjust pre{\hypertarget{ref-zhang_pretrial_2023}{}}%
 \textbf{Zhang, H.}, \& Jonides, J. (2023, July). \emph{Pretrial
 stability predicts momentary lapses of attention}. {[}Talk session{]}.
 The current issues in mind-wandering research conference. Heidelberg,
-Germany.
+germany.
 
 \leavevmode\vadjust pre{\hypertarget{ref-zhang_how_2022}{}}%
 \textbf{Zhang, H.}, Adkins, T., Lee, T., \& Jonides, J. (2022,
@@ -336,12 +348,12 @@ covid-19).
 \textbf{Zhang, H.}, Qu, C., Miller, K. F., \& Cortina, K. S. (2019,
 November). \emph{Reduced re-reading of garden-path jokes during mindless
 reading}. {[}Poster session{]}. The psychonomic society's 60th annual
-meeting. Montreal, Québec, Canada.
+meeting. Montreal, québec, canada.
 
-\leavevmode\vadjust pre{\hypertarget{ref-zhang_mind-wandering_2019}{}}%
+\leavevmode\vadjust pre{\hypertarget{ref-zhang_mind-wandering_2019-1}{}}%
 \textbf{Zhang, H.}, Miller, K. F., Cortina, K. S., \& Jiang, T. (2019,
 June). \emph{Mind-wandering in college classrooms: A mobile eye-tracking
-study}. {[}Poster session{]}. SARMAC XIII. Cape Cod, MA, USA.
+study}. {[}Poster session{]}. SARMAC XIII. Cape cod, MA, USA.
 
 \leavevmode\vadjust pre{\hypertarget{ref-zhang_what_2019}{}}%
 \textbf{Zhang, H.}, \& Shah, P. (2019, May). \emph{What can iPhone's
@@ -349,28 +361,28 @@ screen time tell about your cognitive functioning?} {[}Poster
 session{]}. The association for psychological science annual meeting.
 Washington, DC, USA.
 
-\leavevmode\vadjust pre{\hypertarget{ref-zhang_mind-wandering_2019-1}{}}%
+\leavevmode\vadjust pre{\hypertarget{ref-zhang_mind-wandering_2019}{}}%
 \textbf{Zhang, H.} (2019, April). \emph{Mind-wandering: What can we
 learn from eye-movements?} {[}Talk session{]}. The combined program in
-education and psychology brownbag. Ann Arbor, MI, USA.
+education and psychology brownbag. Ann arbor, MI, USA.
 
 \leavevmode\vadjust pre{\hypertarget{ref-zhang_scan-paths_2019}{}}%
 \textbf{Zhang, H.}, Miller, K. F., \& Sun, X. (2019, March).
 \emph{Scan-paths of mind-wandering during video lectures}. {[}Poster
 session{]}. The international convention of psychological science.
-Paris, France.
+Paris, france.
 
 \leavevmode\vadjust pre{\hypertarget{ref-zhang_how_2018}{}}%
 \textbf{Zhang, H.}, \& Miller, K. F. (2018, November). \emph{How
 irrelevant speech affects reading: The role of word predictability}.
 {[}Poster session{]}. The psychonomic society's 59th annual meeting. New
-Orleans, LA, USA.
+orleans, LA, USA.
 
 \leavevmode\vadjust pre{\hypertarget{ref-zhang_wandering_2018}{}}%
 \textbf{Zhang, H.}, Miller, K. F., \& Sun, X. (2018, May). \emph{The
 wandering eyes: Mind-wandering during video lectures is associated with
 oculomotor behaviors}. {[}Poster session{]}. The association for
-psychological science annual meeting. San Francisco, CA, USA.
+psychological science annual meeting. San francisco, CA, USA.
 
 \leavevmode\vadjust pre{\hypertarget{ref-zhang_how_2016}{}}%
 \textbf{Zhang, H.}, Miller, K. F., Cleveland, R., \& Cortina, K. S.
@@ -399,12 +411,6 @@ Instructor}\label{graduate-student-instructor}}
     \cventry{Grading student essays and exams; office hours; supervising student research projects}{PSYCH 457 : Research in Educational and Cross-Cultural Settings}{01/2017 - 04/2017}{}{}\vspace{-4.0mm}
     \cventry{Three review sessions per week; grading assignments and exams; office hours}{PSYCH 240: Intro to Cognitive Psychology}{09/2016 - 12/2016}{}{}\vspace{-4.0mm}
     \cventry{Grading student essays and exams; office hours; supervising student research projects}{PSYCH 457 : Research in Educational and Cross-Cultural Settings}{01/2016 - 04/2016}{}{}\vspace{-4.0mm}
-\end{cventries}
-
-\hypertarget{program-assistant}{%
-\subsection{Program Assistant}\label{program-assistant}}
-
-\begin{cventries}
     \cventry{Supervising joint research projects between US and Chinese students; organizing student activities}{Global Course Connection: Beijing Normal University}{2015 - 2019}{}{}\vspace{-4.0mm}
 \end{cventries}
 
@@ -438,6 +444,34 @@ Instructor}\label{graduate-student-instructor}}
 \hypertarget{professional-service}{%
 \section{Professional Service}\label{professional-service}}
 
+\hypertarget{opam-object-perception-attention-and-memory-workshop-organizer}{%
+\subsection{OPAM (Object Perception, Attention, and Memory) Workshop
+Organizer}\label{opam-object-perception-attention-and-memory-workshop-organizer}}
+
+\begin{itemize}
+\tightlist
+\item
+  OPAM 31, November 16th 2023, San Francisco, CA, US
+\item
+  OPAM 32, November 20th 2024, New York City, NY, YS
+\item
+  \url{http://www.opam.net/}
+\end{itemize}
+
+\hypertarget{mentor-in-the-star-scholarship-transferable-skills-academia-research-scholars-program}{%
+\subsection{Mentor in the STAR (Scholarship, Transferable skills,
+Academia \& Research) Scholars
+Program}\label{mentor-in-the-star-scholarship-transferable-skills-academia-research-scholars-program}}
+
+\begin{itemize}
+\tightlist
+\item
+  2018-2020, facilitated underrepresented students' involvement in
+  research and transferable skills.
+\item
+  \url{https://lsa.umich.edu/psych/undergraduates/star-scholars-program.html}
+\end{itemize}
+
 \hypertarget{ad-hoc-reviewer}{%
 \subsection{Ad Hoc Reviewer}\label{ad-hoc-reviewer}}
 
@@ -461,16 +495,18 @@ Instructor}\label{graduate-student-instructor}}
   Cognition
 \item
   Scientific Reports
+\item
+  Journal of Experimental Psychology: Human Perception and Performance
 \end{itemize}
 
 \hypertarget{references}{%
 \section{References}\label{references}}
 
 \begin{cventries}
-    \cventry{Edward E. Smith Professor of Psychology and Neuroscience; Co-Director, functional MRI Center, University of Michigan; Senior Editor, Psychological Science}{John Jonides, Ph.D.}{jjonides@umich.edu; 734-764-0192}{}{}\vspace{-4.0mm}
-    \cventry{Professor of Psychology and Education,  University of Michigan}{Kevin F. Miller, Ph.D.}{kevinmil@umich.edu; 734-615-1800}{}{}\vspace{-4.0mm}
-    \cventry{Professor of Cognition \& Cognitive Neuroscience and Educational Psychology, University of Michigan}{Priti Shah, Ph.D.}{priti@umich.edu; 734-615-3745}{}{}\vspace{-4.0mm}
-    \cventry{Professor of Psychology, University of Michigan}{Kai S. Cortina, Ph.D.}{schnabel@umich.edu; 734-615-3809}{}{}\vspace{-4.0mm}
+    \cventry{Edward E. Smith Professor of Psychology and Neuroscience; Co-Director, functional MRI Center, University of Michigan}{John Jonides, Ph.D.}{jjonides@umich.edu}{}{}\vspace{-4.0mm}
+    \cventry{Professor of Psychology and Education, University of Michigan}{Kevin F. Miller, Ph.D.}{kevinmil@umich.edu}{}{}\vspace{-4.0mm}
+    \cventry{Assistant Professor of Psychology, University of Michigan}{Taraz G. Lee, Ph.D.}{tarazlee@umich.edu}{}{}\vspace{-4.0mm}
+    \cventry{Professor of Psychology, University of Colorado Boulder}{Akira Miyake, Ph.D.}{akira.miyake@colorado.edu}{}{}\vspace{-4.0mm}
 \end{cventries}
 
 

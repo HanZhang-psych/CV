@@ -193,20 +193,7 @@ tribble(
   "Three review sessions per week; grading assignments and exams; office hours",
   '01/2016 - 04/2016',
   "PSYCH 457 : Research in Educational and Cross-Cultural Settings",
-  "Grading student essays and exams; office hours; supervising student research projects"
-) %>%
-  detailed_entries(where = Year,
-                   with = Name,
-                   what = Duty) 
-```
-
-## Program Assistant
-
-```{r}
-tribble(
-  ~ Year,
-  ~ Name,
-  ~ Duty,
+  "Grading student essays and exams; office hours; supervising student research projects",
   '2015 - 2019',
   "Global Course Connection: Beijing Normal University",
   "Supervising joint research projects between US and Chinese students; organizing student activities"
@@ -215,6 +202,7 @@ tribble(
                    with = Name,
                    what = Duty) 
 ```
+
 
 # Grant-writing Experience
 
@@ -272,6 +260,16 @@ tribble(
 
 
 # Professional Service
+## OPAM (Object Perception, Attention, and Memory) Workshop Organizer
+
+- OPAM 31, November 16th 2023, San Francisco, CA, US
+- OPAM 32, November 20th 2024, New York City, NY, YS
+- http://www.opam.net/
+
+## Mentor in the STAR (Scholarship, Transferable skills, Academia & Research) Scholars Program
+
+- 2018-2020, facilitated underrepresented students’ involvement in research and transferable skills.
+- https://lsa.umich.edu/psych/undergraduates/star-scholars-program.html
 
 ## Ad Hoc Reviewer
 
@@ -284,6 +282,7 @@ tribble(
 -   Psychological Research
 -   Cognition
 -   Scientific Reports
+-   Journal of Experimental Psychology: Human Perception and Performance
 
 # References
 
@@ -293,17 +292,17 @@ tribble(
   ~ Title,
   ~ Contact,
   'John Jonides, Ph.D.',
-  "Edward E. Smith Professor of Psychology and Neuroscience; Co-Director, functional MRI Center, University of Michigan; Senior Editor, Psychological Science",
-  "jjonides@umich.edu; 734-764-0192",
+  "Edward E. Smith Professor of Psychology and Neuroscience; Co-Director, functional MRI Center, University of Michigan",
+  "jjonides@umich.edu",
   'Kevin F. Miller, Ph.D.',
-  "Professor of Psychology and Education,  University of Michigan",
-  "kevinmil@umich.edu; 734-615-1800",
-  'Priti Shah, Ph.D.',
-  "Professor of Cognition & Cognitive Neuroscience and Educational Psychology, University of Michigan",
-  "priti@umich.edu; 734-615-3745",
-  'Kai S. Cortina, Ph.D.',
-  "Professor of Psychology, University of Michigan",
-  "schnabel@umich.edu; 734-615-3809"
+  "Professor of Psychology and Education, University of Michigan",
+  "kevinmil@umich.edu",
+  'Taraz G. Lee, Ph.D.',
+  "Assistant Professor of Psychology, University of Michigan",
+  "tarazlee@umich.edu",
+  'Akira Miyake, Ph.D.',
+  "Professor of Psychology, University of Colorado Boulder",
+  "akira.miyake@colorado.edu"
 ) %>%
   detailed_entries(where = Contact,
                    with = Name,
