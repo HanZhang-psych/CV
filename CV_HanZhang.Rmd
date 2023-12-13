@@ -266,9 +266,9 @@ tribble(
 - OPAM 32, November 20th 2024, New York City, NY, YS
 - http://www.opam.net/
 
-## Mentor in the STAR (Scholarship, Transferable skills, Academia & Research) Scholars Program
+## STAR (Scholarship, Transferable skills, Academia & Research) Scholars Mentor
 
-- 2018-2020, facilitated underrepresented students’ involvement in research and transferable skills.
+- 2018-2020, mentored underrepresented students on academic research engagement and transferable skills.
 - https://lsa.umich.edu/psych/undergraduates/star-scholars-program.html
 
 ## Ad Hoc Reviewer
