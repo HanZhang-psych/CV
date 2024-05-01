@@ -10,7 +10,7 @@ googlescholar: ujW-lXkAAAAJ
 osf: nrtbk # currently vitae doesn't support osf in the yaml header, need to add \osf{nrtbk} in the .tex file manulaly
 github: HanZhang-psych
 twitter: \_HanZhang_
-researchgate: Han_Zhang175
+#researchgate: Han_Zhang175
 headcolor: 414141 # use black color
 date: "`r format(Sys.time(), '%B %Y')`"
 csl: apa-cv.csl # change this if you want to use other citation styles
@@ -29,7 +29,7 @@ library(vitae);library(tibble)
 
 # Research Interests
 
-Attention; distraction; mind-wandering; eye movements
+Visual attention; distraction; mind-wandering; attentional control
 
 # Education
 
@@ -127,16 +127,16 @@ tribble(
   ) 
 ```
 
-# Peer-reviewed Articles
+# Journal Articles
 
 ```{r}
 bibliography_entries("Published.bib")
 ```
 
-# Book Chapters
+# Book Chapters and Conference Proceedings
 
 ```{r}
-bibliography_entries("Book_chapters.bib")
+bibliography_entries("Other.bib")
 ```
 
 # Under Review
@@ -213,36 +213,48 @@ tribble(
   ~ Institution,
   ~ Supp,
   ~ Outcome,
-  '2022',
+  '2024',
+  'Toward a Psychological and Neural Model of Conflict Resolution',
+  'National Science Foundation',
+  'Role: Conceptualization; original draft preparation; formal analysis; reviewing & editing',
+  'Funded',
+  
+  '2023',
   'Investigating interference-control in ADHD using a novel forced-response method',
   'R21, National Institute of Mental Health',
   'Role: Conceptualization; original draft preparation; formal analysis; reviewing & editing',
   'Funded',
-  '2022',
+  
+  '2023',
   'Probing attentional allocation with a novel forced-response method',
   'National Science Foundation',
   'Role: Conceptualization; original draft preparation; formal analysis; reviewing & editing',
   'Funded',
+  
   '2022',
   'Testing the efficacy of interactive decision aids on vaccine attitudes and uptake using a Bayesian precision estimates',
   'Merck Investigator Studies Program',
   'Role: reviewing & editing',
   'Pending',
+  
   '2022',
   'Uncovering mechanisms of interference-resolution with a novel forced-response method',
   'National Science Foundation',
   'Role: Conceptualization; original draft preparation; formal analysis; reviewing & editing',
   'Not Funded',
+  
   '2021',
   'Dissecting Distractibility by the Capture of Attention',
   'National Science Foundation',
   'Role: Original draft preparation; formal analysis; reviewing & editing',
   'Not Funded',
+  
   '2020',
   'Mitigating distraction from external and internal sources',
   'National Science Foundation',
   'Role: Original draft preparation; formal analysis; reviewing & editing',
   'Not Funded',
+  
   '2019',
   'Failure to resist external and internal distraction in ADHD',
   'R01, National Institute of Mental Health',
@@ -263,7 +275,7 @@ tribble(
 ## OPAM (Object Perception, Attention, and Memory) Workshop Organizer
 
 - OPAM 31, November 16th 2023, San Francisco, CA, US
-- OPAM 32, November 20th 2024, New York City, NY, YS
+- OPAM 32, November 21th 2024, New York City, NY, YS
 - http://www.opam.net/
 
 ## STAR (Scholarship, Transferable skills, Academia & Research) Scholars Mentor
@@ -283,6 +295,8 @@ tribble(
 -   Cognition
 -   Scientific Reports
 -   Journal of Experimental Psychology: Human Perception and Performance
+-   PLOS One
+-   Journal of Memory and Language
 
 # References
 
