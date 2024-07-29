@@ -205,10 +205,10 @@ tribble(
   ~ Supp,
   ~ Outcome,
   '2024',
-  'Expanding the Impact of the Annual Object Perpcetion, Attention, and Memory (OPAM) Conference',
+  'The Object Perpcetion, Attention, and Memory (OPAM) Conference',
   'National Science Foundation',
   'Role: Conceptualization; original draft preparation; reviewing & editing',
-  'In preparation for submission',
+  'Under Review',
   
   '2024',
   'Toward a Psychological and Neural Model of Conflict Resolution',

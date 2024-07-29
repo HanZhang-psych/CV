@@ -75,9 +75,9 @@
 % Needed to use icons from font-awesome
 % (https://github.com/posquit0/latex-fontawesome)
 \defaultfontfeatures{Extension = .otf}
-\RequirePackage{fontawesome5}
+\RequirePackage{fontawesome}
 % Add support of academia icons
-\RequirePackage{academicons}
+\usepackage{academicons}
 \RequirePackage[default,opentype]{sourcesanspro}
 % Needed for the photo ID
 \RequirePackage[skins]{tcolorbox}
@@ -191,11 +191,11 @@
 %-------------------------------------------------------------------------------
 % Configure styles for each CV elements
 % For fundamental structures
-\newcommand*{\headerfirstnamestyle}[1]{{\fontsize{32pt}{1em}\headerfont\bfseries\color{text} #1}}
+\newcommand*{\headerfirstnamestyle}[1]{{\fontsize{32pt}{1em}\headerfont\bfseries\color{text} #1}} % HZ: bold first name as well
 \newcommand*{\headerlastnamestyle}[1]{{\fontsize{32pt}{1em}\headerfont\bfseries\color{text} #1}}
-\newcommand*{\headerpositionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\scshape\color{awesome} #1}}
-\newcommand*{\headeraddressstyle}[1]{{\fontsize{10pt}{1em}\headerfont\itshape\color{lighttext} #1}}
-\newcommand*{\headersocialstyle}[1]{{\fontsize{9pt}{1em}\headerfont\color{text} #1}}
+\newcommand*{\headerpositionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\scshape\color{awesome} #1}} % HZ: increase size for position
+\newcommand*{\headeraddressstyle}[1]{{\fontsize{10pt}{1em}\headerfont\itshape\color{lighttext} #1}} % HZ: increase size for affiliation information
+\newcommand*{\headersocialstyle}[1]{{\fontsize{9pt}{1em}\headerfont\color{text} #1}} % HZ: increase size for contact information
 \newcommand*{\headerquotestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\itshape\color{darktext} #1}}
 \newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\scshape\color{lighttext} #1}}
 \newcommand*{\sectionstyle}[1]{{\fontsize{16pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
@@ -276,6 +276,10 @@
 % Usage: \name{<position>}
 \newcommand*{\position}[1]{\def\@position{#1}}
 
+% Defines writer's pronouns (optional)
+% Usage: \pronouns{<pronouns>}
+\newcommand*{\pronouns}[1]{\def\@pronouns{#1}}
+
 % Defines writer's mobile (optional)
 % Usage: \mobile{<mobile number>}
 \newcommand*{\mobile}[1]{\def\@mobile{#1}}
@@ -291,10 +295,6 @@
 % Defines writer's orcid (optional)
 % Usage: \orcid{<orcid>}
 \newcommand*{\orcid}[1]{\def\@orcid{#1}}
-
-% Defines writer's OSF (optional) #HZ 20230604: added OSF account
-% Usage: \osf{<osf>}
-\newcommand*{\osf}[1]{\def\@osf{#1}}
 
 % Defines writer's Publons account (optional)
 % Usage: \publons{<publons>}
@@ -350,6 +350,10 @@
 % Usage: \quote{<quote>}
 \renewcommand*{\quote}[1]{\def\@quote{#1}}
 
+% Defines writer's OSF (optional) #HZ 20230604: added OSF account
+% Usage: \osf{<osf>}
+\newcommand*{\osf}[1]{\def\@osf{#1}}
+
 % Defines recipient's information (cover letter only)
 % Usage: \recipient{<recipient name>}{<recipient address>}
 % Usage: \recipientname{<recipient name>}
@@ -390,9 +394,9 @@
 %% Define helper macros a user can change easily
 % Header
 \newcommand{\acvHeaderNameDelim}{\space}
-\newcommand{\acvHeaderAfterNameSkip}{1mm}
-\newcommand{\acvHeaderAfterPositionSkip}{1mm}
-\newcommand{\acvHeaderAfterAddressSkip}{1mm}
+\newcommand{\acvHeaderAfterNameSkip}{1mm} % HZ: increase spacing between headers
+\newcommand{\acvHeaderAfterPositionSkip}{1mm} % HZ: increase spacing between headers
+\newcommand{\acvHeaderAfterAddressSkip}{1mm} % HZ: increase spacing between headers
 \newcommand{\acvHeaderIconSep}{\space}
 \newcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 \newcommand{\acvHeaderAfterSocialSkip}{6mm}
@@ -459,11 +463,17 @@
     \headersocialstyle{%
       \newbool{isstart}%
       \setbool{isstart}{true}%
+      \ifthenelse{\isundefined{\@pronouns}}%
+        {}%
+        {%
+          \faComment\acvHeaderIconSep\@pronouns%
+          \setbool{isstart}{false}%
+        }%
       \ifthenelse{\isundefined{\@mobile}}%
         {}%
         {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \faMobile\acvHeaderIconSep\@mobile%
-          \setbool{isstart}{false}%
         }%
       \ifthenelse{\isundefined{\@email}}%
         {}%
@@ -481,8 +491,8 @@
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          % HZ 06042023: use light icon
           %\href{https://orcid.org/\@orcid}{\aiOrcidSquare\acvHeaderIconSep\@orcid}%
+          % HZ 06042023: use light icon
           \href{https://orcid.org/\@orcid}{\aiOrcid\acvHeaderIconSep\@orcid}%
         }%
       \ifthenelse{\isundefined{\@publons}}%
@@ -495,33 +505,33 @@
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          %HZ 06042023: display name instead of google scholar id, same below
           %\href{https://scholar.google.com/citations?user=\@googlescholar}{\aiGoogleScholarSquare\acvHeaderIconSep\@googlescholar}%
+          %HZ 06042023: display name instead of google scholar id, same below
           \href{https://scholar.google.com/citations?user=\@googlescholar}{\aiGoogleScholar\acvHeaderIconSep Google Scholar}%
         }%
       \ifthenelse{\isundefined{\@researchgate}}%
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          %\href{https://www.researchgate.net/profile/\@researchgate}{\aiResearchGateSquare\acvHeaderIconSep\@researchgate}%
           % HZ 06042023: use light icon
-          %\href{https://www.researchgate.net/profile/\@researchgate}{\aiResearchGateSquare\acvHeaderIconSep Research Gate}%
           \href{https://www.researchgate.net/profile/\@researchgate}{\aiResearchGate\acvHeaderIconSep RG}%
         }%
       \ifthenelse{\isundefined{\@github}}%
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          %\href{https://github.com/\@github}{\faGithubSquare\acvHeaderIconSep\@github}%
           % HZ 06042023: use light icon
-          %\href{https://github.com/\@github}{\faGithubSquare\acvHeaderIconSep Github}%
           \href{https://github.com/\@github}{\faGithub\acvHeaderIconSep Github}%
         }%
       % HZ 06042023: added OSF support
       \ifthenelse{\isundefined{\@osf}}%
-        {}%
-        {%
-          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://osf.io/\@osf}{\aiOSF\acvHeaderIconSep OSF}%
-        }%                
+      {}%
+      {%
+        \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+        \href{https://osf.io/\@osf}{\aiOSF\acvHeaderIconSep OSF}%
+      }%                
       \ifthenelse{\isundefined{\@gitlab}}%
         {}%
         {%
@@ -544,7 +554,7 @@
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://twitter.com/\@twitter}{\faTwitter\acvHeaderIconSep Twitter}%
+          \href{https://twitter.com/\@twitter}{\faTwitter\acvHeaderIconSep\@twitter}%
         }%
       \ifthenelse{\isundefined{\@skype}}%
         {}%
@@ -603,7 +613,7 @@
 % Usage: \cvsubsection{<subsection-title>}
 \renewcommand{\subsection}[1]{%
 	\vspace{\acvSectionContentTopSkip}
-	\vspace{-3mm}
+	\vspace{0mm} % HZ: add some space between entries
 	\subsectionstyle{#1}
 	\phantomsection
 }
@@ -628,7 +638,7 @@
 % Define an entry of cv information
 % Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
 \newcommand*{\cventry}[5]{
-%  \vspace{-2.0mm}
+  %\vspace{-1mm} % HZ: add some space between entries
   \setlength\tabcolsep{0pt}%
   \setlength{\extrarowheight}{0pt}%
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}%
@@ -709,7 +719,7 @@
 }{%
   \end{itemize}
   \end{justify}
-  \vspace{-4.0mm}
+  \vspace{1.0mm} % HZ: reduce space for CV entries of information
 }
 
 
