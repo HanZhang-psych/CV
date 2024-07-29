@@ -613,7 +613,7 @@
 % Usage: \cvsubsection{<subsection-title>}
 \renewcommand{\subsection}[1]{%
 	\vspace{\acvSectionContentTopSkip}
-	\vspace{0mm} % HZ: add some space between entries
+	\vspace{-1mm} % HZ: add some space between entries
 	\subsectionstyle{#1}
 	\phantomsection
 }
@@ -638,7 +638,6 @@
 % Define an entry of cv information
 % Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
 \newcommand*{\cventry}[5]{
-  %\vspace{-1mm} % HZ: add some space between entries
   \setlength\tabcolsep{0pt}%
   \setlength{\extrarowheight}{0pt}%
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}%
@@ -719,7 +718,7 @@
 }{%
   \end{itemize}
   \end{justify}
-  \vspace{1.0mm} % HZ: reduce space for CV entries of information
+  \vspace{0mm} % HZ: reduce space for CV entries of information
 }
 
 
