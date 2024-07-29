@@ -129,6 +129,12 @@ tribble(
 
 # Journal Articles
 
+## In press
+```{r}
+bibliography_entries("In-press.bib")
+```
+
+## Published
 ```{r}
 bibliography_entries("Published.bib")
 ```
