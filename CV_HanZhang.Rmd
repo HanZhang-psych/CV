@@ -107,7 +107,7 @@ tribble(
 tribble(
   ~Year, ~Name, ~Institution, ~Supp, ~Amount,
   '2020', 'Stanley E. and Ruth B. Dimond Best Dissertation Award', 'School of Education, University of Michigan', 'Dissertation: Mind-wandering: What Can We Learn from Eye Movements?', '$500',
-  '2020', '2020 ProQuest Distinguished Dissertation Awards (Nomination)','School of Education, University of Michigan', NA ,NA,
+  '2020', 'ProQuest Distinguished Dissertation Award (Nomination)','School of Education, University of Michigan', NA ,NA,
   '2019', "Rackham One-Term Dissertation Fellowship", "Rackham Graduate School, University of Michigan",NA,'$17417',
   '2019', "Rackham Graduate Student Research Grant", "Rackham Graduate School, University of Michigan",NA,'$3000',
   '2019, 2018, 2017', "Rackham Conference Travel Grant","Rackham Graduate School, University of Michigan",NA,'$1050',
@@ -301,6 +301,9 @@ tribble(
   'John Jonides, Ph.D.',
   "Edward E. Smith Professor of Psychology and Neuroscience; Co-Director, functional MRI Center, University of Michigan",
   "jjonides@umich.edu",
+  'Taraz G. Lee, Ph.D.',
+  "Assistant Professor of Psychology, University of Michigan",
+  "tarazlee@umich.edu",
   'Priti Shah, Ph.D.',
   "Department Chair, Arthur Thurnau Professor of Psychology, Education, and Information, University of Michigan",
   "priti@umich.edu",
