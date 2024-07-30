@@ -15,7 +15,7 @@
     <category citation-format="author-date"/>
     <category field="psychology"/>
     <category field="generic-base"/>
-    <updated>2024-07-29T02:06:37+00:00</updated>
+    <updated>2024-07-30T14:00:46+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en">
@@ -406,11 +406,15 @@
               </else-if>
             </choose>
           </if>
-          <else-if variable="note">
+          <else-if variable="status">
             <group>
-              <text term="in press" form="short" text-case="lowercase"/>
+              <text variable="status" text-case="lowercase"/>
               <text variable="year-suffix" prefix="-"/>
             </group>
+          </else-if>
+          <else-if match="any" variable="note">
+            <text term="in press"/>
+            <text variable="year-suffix"/>
           </else-if>
           <else>
             <text term="no date" form="short"/>
