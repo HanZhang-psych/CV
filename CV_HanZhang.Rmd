@@ -29,7 +29,7 @@ library(vitae);library(tibble)
 
 # Research Interests
 
-Visual attention; cognitive control; mind-wandering; learning in educational contexts
+Visual attention; cognitive control; mind-wandering; ADHD
 
 # Education
 
@@ -208,7 +208,7 @@ tribble(
   'The Object Perpcetion, Attention, and Memory (OPAM) Conference',
   'National Science Foundation',
   'Role: Conceptualization; original draft preparation; reviewing & editing',
-  'Under Review',
+  'Funded',
   
   '2024',
   'Toward a Psychological and Neural Model of Conflict Resolution',
@@ -290,6 +290,7 @@ tribble(
 -   PLOS One
 -   Journal of Memory and Language
 -   Neurobiology of Aging
+-   Behavioral Research Methods
 
 # References
 
