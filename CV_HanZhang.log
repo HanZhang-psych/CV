@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.20)  2 SEP 2024 12:50
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.20)  9 SEP 2024 15:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -791,9 +791,9 @@ LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/m/it' will be
 
 ]
 LaTeX Font Info:    Font shape `TU/SourceSansPro(0)/b/n' will be
-(Font)              scaled to size 10.95pt on input line 197.
+(Font)              scaled to size 10.95pt on input line 200.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(0)/m/it' will be
-(Font)              scaled to size 10.95pt on input line 199.
+(Font)              scaled to size 10.95pt on input line 202.
 [2] [3] [4] [5] (./CV_HanZhang.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
@@ -806,10 +806,10 @@ Package rerunfilecheck Info: File `CV_HanZhang.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 32860 strings out of 477590
- 669022 string characters out of 5817748
+ 32863 strings out of 477590
+ 669098 string characters out of 5817748
  1950422 words of memory out of 5000000
- 53515 multiletter control sequences out of 15000+600000
+ 53518 multiletter control sequences out of 15000+600000
  562051 words of font info for 122 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  116i,11n,121p,549b,637s stack positions out of 10000i,1000n,20000p,200000b,200000s

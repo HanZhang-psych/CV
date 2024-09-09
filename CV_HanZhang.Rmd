@@ -107,6 +107,7 @@ tribble(
 tribble(
   ~Year, ~Name, ~Institution, ~Supp, ~Amount,
   '2020', 'Stanley E. and Ruth B. Dimond Best Dissertation Award', 'School of Education, University of Michigan', 'Dissertation: Mind-wandering: What Can We Learn from Eye Movements?', '$500',
+  '2020','MPA Graduate Student Paper Award', 'Midwestern Psychological Association Annual Meeting', 'Scan-paths of mind-wandering during real-world scene perception', '$300',
   '2020', 'ProQuest Distinguished Dissertation Award (Nomination)','School of Education, University of Michigan', NA ,NA,
   '2019', "Rackham One-Term Dissertation Fellowship", "Rackham Graduate School, University of Michigan",NA,'$17417',
   '2019', "Rackham Graduate Student Research Grant", "Rackham Graduate School, University of Michigan",NA,'$3000',
@@ -149,49 +150,6 @@ bibliography_entries("Under_review.bib")
 
 ```{r}
 bibliography_entries("Presentations.bib")
-```
-
-# Teaching Experience
-
-## Primary Instructor
-
-```{r}
-tribble(
-  ~ Year,
-  ~ Name,
-  ~ Duty,
-  '09/2017 - 12/2017',
-  "EDUC 391: Educational Psychology and Human Development",
-  "Participated in course design; taught weekly lectures; graded assignments and exams; held office hours"
-) %>%
-  detailed_entries(where = Year,
-                   with = Name,
-                   what = Duty) 
-```
-
-## Graduate Student Instructor
-
-```{r}
-tribble(
-  ~ Year,
-  ~ Name,
-  ~ Duty,
-  '01/2019 - 04/2019',
-  "PSYCH 111: Introduction to Psychology",
-  "Taught three one-hour classes per week; graded student essays and exams; held office hours",
-  '09/2016 - 12/2016',
-  "PSYCH 240: Introduction to Cognitive Psychology",
-  "Taught three one-hour classes per week; graded student essays and exams; held office hours",
-  '2016 - 2020',
-  "PSYCH 457: Research in Educational and Cross-Cultural Settings",
-  "Graded student essays and exams; held office hours; supervised student research projects",
-  '2015 - 2019',
-  "Global Course Connection: Beijing Normal University",
-  "Supervised joint research projects between US and Chinese students; organized cultural exchange activities"
-) %>%
-  detailed_entries(where = Year,
-                   with = Name,
-                   what = Duty) 
 ```
 
 
@@ -261,6 +219,48 @@ tribble(
   ) 
 ```
 
+# Teaching Experience
+
+## Primary Instructor
+
+```{r}
+tribble(
+  ~ Year,
+  ~ Name,
+  ~ Duty,
+  '09/2017 - 12/2017',
+  "EDUC 391: Educational Psychology and Human Development",
+  "Participated in course design; taught weekly lectures; graded assignments and exams; held office hours"
+) %>%
+  detailed_entries(where = Year,
+                   with = Name,
+                   what = Duty) 
+```
+
+## Graduate Student Instructor
+
+```{r}
+tribble(
+  ~ Year,
+  ~ Name,
+  ~ Duty,
+  '01/2019 - 04/2019',
+  "PSYCH 111: Introduction to Psychology",
+  "Taught three one-hour classes per week; graded student essays and exams; held office hours",
+  '09/2016 - 12/2016',
+  "PSYCH 240: Introduction to Cognitive Psychology",
+  "Taught three one-hour classes per week; graded student essays and exams; held office hours",
+  '2016 - 2020',
+  "PSYCH 457: Research in Educational and Cross-Cultural Settings",
+  "Graded student essays and exams; held office hours; supervised student research projects",
+  '2015 - 2019',
+  "Global Course Connection: Beijing Normal University",
+  "Supervised joint research projects between US and Chinese students; organized cultural exchange activities"
+) %>%
+  detailed_entries(where = Year,
+                   with = Name,
+                   what = Duty) 
+```
 
 # Professional Service
 ## Object Perception, Attention, and Memory (OPAM) Conference Organizer
