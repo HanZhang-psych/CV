@@ -134,16 +134,22 @@ tribble(
 bibliography_entries("Published.bib")
 ```
 
-# Book Chapters and Conference Proceedings
-
-```{r}
-bibliography_entries("Other.bib")
-```
-
 # Under Review
 
 ```{r}
 bibliography_entries("Under_review.bib")
+```
+
+# In\ Preparation
+
+```{r}
+bibliography_entries("in prep.bib")
+```
+
+# Book Chapters and Conference Proceedings
+
+```{r}
+bibliography_entries("Other.bib")
 ```
 
 # Selected Presentations
@@ -151,7 +157,6 @@ bibliography_entries("Under_review.bib")
 ```{r}
 bibliography_entries("Presentations.bib")
 ```
-
 
 # Grant-writing Experience
 
