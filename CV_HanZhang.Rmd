@@ -168,7 +168,7 @@ tribble(
   ~ Supp,
   ~ Outcome,
   '2024',
-  'The Object Perpcetion, Attention, and Memory (OPAM) Conference',
+  'The Object Perception, Attention, and Memory (OPAM) Conference',
   'National Science Foundation',
   'Role: Conceptualization; original draft preparation; reviewing & editing',
   'Funded',
