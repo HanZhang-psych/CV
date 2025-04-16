@@ -718,7 +718,7 @@
 }{%
   \end{itemize}
   \end{justify}
-  \vspace{-2mm} % HZ: reduce space for CV entries of information
+  \vspace{0.5mm} % HZ: increase space for CV entries of information
 }
 
 

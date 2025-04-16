@@ -16,8 +16,8 @@ date: "`r format(Sys.time(), '%B %Y')`"
 csl: apa-cv.csl # change this if you want to use other citation styles
 output: 
   vitae::awesomecv:
-    keep_tex: true
-    pandoc_args: ["--lua-filter=lua/strong.lua"]
+      keep_tex: true
+      pandoc_args: ["--lua-filter=lua/strong.lua", "--template=awesome-cv.tex"]
 ---
 
 
@@ -131,31 +131,31 @@ tribble(
 # Journal Articles
 
 ```{r}
-bibliography_entries("Published.bib")
+bibliography_entries("bibs/Published.bib")
 ```
 
 # Under Review
 
 ```{r}
-bibliography_entries("Under_review.bib")
+bibliography_entries("bibs/Under_review.bib")
 ```
 
 # In\ Preparation
 
 ```{r}
-bibliography_entries("in prep.bib")
+bibliography_entries("bibs/in prep.bib")
 ```
 
 # Book Chapters and Conference Proceedings
 
 ```{r}
-bibliography_entries("Other.bib")
+bibliography_entries("bibs/Other.bib")
 ```
 
 # Selected Presentations
 
 ```{r}
-bibliography_entries("Presentations.bib")
+bibliography_entries("bibs/Presentations.bib")
 ```
 
 # Grant-writing Experience
@@ -267,6 +267,10 @@ tribble(
                    what = Duty) 
 ```
 
+# Open-Source Software
+
+- PupEyes: An Interactive Python Library for Pupil Size and Eye Movement Data Processing (https://github.com/HanZhang-psych/pupeyes)
+
 # Professional Service
 ## Object Perception, Attention, and Memory (OPAM) Conference Organizer
 - OPAM 31, November 16th 2023, San Francisco, CA, US
@@ -296,6 +300,7 @@ tribble(
 -   Journal of Memory and Language
 -   Neurobiology of Aging
 -   Behavioral Research Methods
+-   Attention, Perception, & Psychophysics
 
 # References
 
@@ -315,10 +320,7 @@ tribble(
   "priti@umich.edu",
   'Kevin F. Miller, Ph.D.',
   "Professor of Psychology and Education, University of Michigan",
-  "kevinmil@umich.edu",
-  'Akira Miyake, Ph.D.',
-  "Professor of Psychology, University of Colorado Boulder",
-  "akira.miyake@colorado.edu"
+  "kevinmil@umich.edu"
 ) %>%
   detailed_entries(where = Contact,
                    with = Name,
