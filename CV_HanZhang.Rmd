@@ -16,7 +16,7 @@ date: "`r format(Sys.time(), '%B %Y')`"
 csl: apa-cv.csl # change this if you want to use other citation styles
 output: 
   vitae::awesomecv:
-      keep_tex: true
+      keep_tex: false
       pandoc_args: ["--lua-filter=lua/strong.lua", "--template=awesome-cv.tex"]
 ---
 
@@ -300,6 +300,7 @@ tribble(
 -   Journal of Memory and Language
 -   Neurobiology of Aging
 -   Behavioral Research Methods
+-   Psychonomic Bulletin & Review
 -   Attention, Perception, & Psychophysics
 
 # References
