@@ -1,15 +1,15 @@
 ---
 name: Han
 surname: Zhang
-position: "Postdoctoral Research Fellow"
-address: "Department of Psychology, University of Michigan"
-www: sites.lsa.umich.edu/hanzh
+position: "Assistant Research Scientist"
+address: "University of Michigan Transportation Research Institute"
+www: hanzhang.github.io
 email: "hanzh@umich.edu"
 #to get the orcid: 0000-0001-6087-0428
 googlescholar: ujW-lXkAAAAJ
 osf: nrtbk # currently vitae doesn't support osf in the yaml header, need to add \osf{nrtbk} in the .tex file manulaly
 github: HanZhang-psych
-twitter: \_HanZhang_
+# twitter: \_HanZhang_
 #researchgate: Han_Zhang175
 headcolor: 414141 # use black color
 date: "`r format(Sys.time(), '%B %Y')`"
@@ -29,7 +29,29 @@ library(vitae);library(tibble)
 
 # Research Interests
 
-Visual attention; cognitive control; mind-wandering; ADHD
+Attention; Mind-wandering; Distraction; Driving safety
+
+# Employment
+
+```{r}
+tribble(
+  ~ Position,
+  ~ Year,
+  ~ Institution,
+  "Assistant Research Scientist",
+  "06/2025-present",
+  "University of Michigan Transportation Research Institute",
+  "Postdoctoral Research Fellow",
+  "06/2020-06/2025",
+  "Department of Psychology, University of Michigan",
+) %>%
+  detailed_entries(
+    with = Position,
+    where = Year,
+    what = Institution
+  )
+```
+
 
 # Education
 
@@ -39,40 +61,30 @@ tribble(
   ~ Advisor,
   ~ Year,
   ~ Institution,
-  ~ Where,
-  "Postdoctoral Research Fellow, Department of Psychology",
-  "Advisor: Dr. John Jonides",
-  "06/2020-present",
-  "University of Michigan",
-  "Ann Arbor, MI, USA",
   "Doctor of Philosophy, Education and Psychology",
   "Dissertation: Mind-wandering: What Can We Learn from Eye Movements?",
   "09/2014-05/2020",
   "University of Michigan",
-  "Ann Arbor, MI, USA",
   "Master of Science, Psychology",
   NA,
   "09/2014-04/2018",
   "University of Michigan",
-  "Ann Arbor, MI, USA",
   "Bachelor of Science, Psychology",
   NA,
   "09/2010-07/2014",
   "Beijing Normal University",
-  "Beijing, China",
 ) %>%
   detailed_entries(
-    what = Degree,
-    when = Year,
-    with = Institution,
-    where = Where,
+    with = Degree,
+    where = Year,
+    what = Institution,
     why = Advisor
   )
 ```
 
 # Awards and Grants
 
-## Since Postdoc
+## During Postdoc
 
 ```{r}
 tribble(
@@ -134,16 +146,10 @@ tribble(
 bibliography_entries("bibs/Published.bib")
 ```
 
-# Under Review
+# Preprints
 
 ```{r}
-bibliography_entries("bibs/Under_review.bib")
-```
-
-# In\ Preparation
-
-```{r}
-bibliography_entries("bibs/in prep.bib")
+bibliography_entries("bibs/Preprints.bib")
 ```
 
 # Book Chapters and Conference Proceedings
