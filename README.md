@@ -24,7 +24,7 @@ Feel free to clone the files and edit them to make your own!
 
 * `bibs/*.bib` files: I have `.bib` files that separately store info for published papers, in prep manuscripts, conference presentations, etc.. You can create those `.bib` files from your reference manager (e.g., Zotero) or from scratch. These `.bib` files are read in the Rmarkdown file when creating your CV.
 
-* `lua/strong.lua`: This makes your last name in the bibliographies displayed in bold font. Change it to your own last name as needed. 
+* `lua/names.lua`: The lua filter (1) makes your last name in the bibliographies displayed in bold font, and (2) automatically underlines mentee names. Modify the lua filter with a text editor as needed.
 
 Make sure to install `vitae` and `tinytex` if you haven't done so:
 
