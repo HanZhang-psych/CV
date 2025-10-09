@@ -1236,10 +1236,10 @@
   <macro name="event-title">
     <choose>
       <if variable="event-title">
-        <text variable="event-title"/>
+        <text variable="event-title" text-case="title"/>
       </if>
       <else>
-        <text variable="event"/>
+        <text variable="event" text-case="title"/>
       </else>
     </choose>
   </macro>

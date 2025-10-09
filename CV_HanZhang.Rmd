@@ -3,7 +3,7 @@ name: Han
 surname: Zhang
 position: "Assistant Research Scientist"
 address: "University of Michigan Transportation Research Institute"
-www: hanzhang.github.io
+www: hanzhang.cv
 email: "hanzh@umich.edu"
 #to get the orcid: 0000-0001-6087-0428
 googlescholar: ujW-lXkAAAAJ
@@ -17,9 +17,8 @@ csl: apa-cv.csl # change this if you want to use other citation styles
 output: 
   vitae::awesomecv:
       keep_tex: false
-      pandoc_args: ["--lua-filter=lua/strong.lua", "--template=awesome-cv.tex"]
+      pandoc_args: ["--lua-filter=lua/names.lua", "--template=awesome-cv.tex"]
 ---
-
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
@@ -29,7 +28,7 @@ library(vitae);library(tibble)
 
 # Research Interests
 
-Attention; Mind-wandering; Distraction; Driving safety
+Attention; Cognitive Control; Distraction; Driver Behavior
 
 # Employment
 
@@ -51,7 +50,6 @@ tribble(
     what = Institution
   )
 ```
-
 
 # Education
 
@@ -84,7 +82,29 @@ tribble(
 
 # Awards and Grants
 
-## During Postdoc
+```{r}
+tribble(
+  ~ Year,
+  ~ Name,
+  ~ Institution,
+  ~ Supp,
+  ~ Amount,
+  '2025',
+  'Understanding Takeover Performance in Urgent Situations during Level-3 Driving',
+  'UMTRI & Mcity Integration Fund, University of Michigan',
+  'Role: PI',
+  '$99,971'
+) %>%
+  detailed_entries(
+    where = Year,
+    with = Name,
+    what = Institution,
+    why = Supp,
+    when = Amount
+  ) 
+```
+
+## As Postdoc
 
 ```{r}
 tribble(
@@ -113,7 +133,7 @@ tribble(
   ) 
 ```
 
-## Before Postdoc
+## As Graduate Student
 
 ```{r}
 tribble(
@@ -125,7 +145,22 @@ tribble(
   '2019', "Rackham Graduate Student Research Grant", "Rackham Graduate School, University of Michigan",NA,'$3000',
   '2019, 2018, 2017', "Rackham Conference Travel Grant","Rackham Graduate School, University of Michigan",NA,'$1050',
   '2018', "Rackham Summer Training Award","Rackham Graduate School, University of Michigan",NA,'$3700',
-  '2017, 2015', "Professor & Mrs. Cho-Yee To Travel Grant","School of Education, University of Michigan",NA, '$500',
+  '2017, 2015', "Professor & Mrs. Cho-Yee To Travel Grant","School of Education, University of Michigan",NA, '$500'
+) %>% 
+  detailed_entries(
+    where = Year,
+    with = Name, 
+    what = Institution,
+    why = Supp,
+    when = Amount
+  ) 
+```
+
+## As Undergraduate Student
+
+```{r}
+tribble(
+  ~Year, ~Name, ~Institution, ~Supp, ~Amount,
   '2014', "China National Scholarship","Ministry of Education of the People's Republic of China",NA, '$1500',
   '2014, 2013', "The First Rank Academic Scholarship","Faculty of Psychology, Beijing Normal University",NA,'$300',
   '2013', "Beijing Student Research and Entrepreneurial Action Plan","Beijing Municipal Commission of Education",NA,'$1500',
@@ -142,29 +177,118 @@ tribble(
 
 # Journal Articles
 
+Underlined names indicate undergraduate research mentees.
+
 ```{r}
-bibliography_entries("bibs/Published.bib")
+bibliography_entries("bibs/journal_articles.bib")
 ```
 
-# Preprints
+# Under Review
+
+\* indicates shared first authorship.
 
 ```{r}
-bibliography_entries("bibs/Preprints.bib")
+bibliography_entries("bibs/preprints.bib")
 ```
 
 # Book Chapters and Conference Proceedings
 
+Underlined names indicate undergraduate research mentees.
+
 ```{r}
-bibliography_entries("bibs/Other.bib")
+bibliography_entries("bibs/other.bib")
 ```
 
 # Selected Presentations
 
+Underlined names indicate undergraduate research mentees.
+
 ```{r}
-bibliography_entries("bibs/Presentations.bib")
+bibliography_entries("bibs/talks.bib")
 ```
 
-# Grant-writing Experience
+# Teaching and Mentoring Experience
+
+## Primary Instructor
+
+```{r}
+tribble(
+  ~ Year,
+  ~ Name,
+  ~ Duty,
+  '09/2017 - 12/2017',
+  "EDUC 391: Educational Psychology and Human Development",
+  "Participated in course design; taught weekly lectures; graded assignments and exams; held office hours"
+) %>%
+  detailed_entries(where = Year,
+                   with = Name,
+                   what = Duty) 
+```
+
+## Graduate Student Instructor
+
+```{r}
+tribble(
+  ~ Year,
+  ~ Name,
+  ~ Duty,
+  '01/2019 - 04/2019',
+  "PSYCH 111: Introduction to Psychology",
+  "Taught three one-hour classes per week; graded student essays and exams; held office hours",
+  '09/2016 - 12/2016',
+  "PSYCH 240: Introduction to Cognitive Psychology",
+  "Taught three one-hour classes per week; graded student essays and exams; held office hours",
+  '2016 - 2020',
+  "PSYCH 457: Research in Educational and Cross-Cultural Settings",
+  "Graded student essays and exams; held office hours; supervised student research projects",
+  '2015 - 2019',
+  "Global Course Connection: Beijing Normal University",
+  "Supervised joint research projects between US and Chinese students; organized cultural exchange activities"
+) %>%
+  detailed_entries(where = Year,
+                   with = Name,
+                   what = Duty) 
+```
+
+## Undergraduate Research Opportunity Program (UROP) Mentor
+
+```{r}
+tribble(
+  ~ Year,
+  ~ Name,
+  ~ Duty,
+  '2018 - 2025',
+  "Mentored students: Madelyn Evans (2018), Nicole Fraija (2018), Yun-Gi Hwang (2019), Alexander Fischer (2019), Esha Brar (2023)",
+  "Mentored undergraduate students conducting research projects.",
+) %>%
+  detailed_entries(where = Year,
+                   with = Name,
+                   what = Duty) 
+```
+
+
+## STAR (Scholarship, Transferable skills, Academia & Research) Scholars Mentor
+
+```{r}
+tribble(
+  ~ Year,
+  ~ Name,
+  ~ Duty,
+  '2018 - 2020',
+  "Mentored students: Brianna Westpfahl (2019), Michael Cloud (2019), Julliana Ramirez-Matias (2019), Rachel Kushner (2020), Ruby Zheng (2020), Skylar Brodnan (2020)",
+  "Mentored underrepresented students on academic research engagement and transferable skills. More info: https://lsa.umich.edu/psych/undergraduates/star-scholars-program.html",
+) %>%
+  detailed_entries(where = Year,
+                   with = Name,
+                   what = Duty) 
+```
+
+# Open-Source Software
+
+-   [PupEyes: An Interactive Python Library for Eye Movement Data Processing](https://pupeyes.readthedocs.io/)
+
+
+# Grant-Writing Experience
 
 ```{r}
 tribble(
@@ -173,6 +297,12 @@ tribble(
   ~ Institution,
   ~ Supp,
   ~ Outcome,
+  '2025',
+  'Understanding Takeover Performance in Urgent Situations during Level-3 Driving',
+  'UMTRI & Mcity Integration Fund, University of Michigan',
+  'Role: Conceptualization; original draft preparation; reviewing & editing',
+  'Funded',
+  
   '2024',
   'The Object Perception, Attention, and Memory (OPAM) Conference',
   'National Science Foundation',
@@ -230,68 +360,16 @@ tribble(
   ) 
 ```
 
-# Teaching Experience
-
-## Primary Instructor
-
-```{r}
-tribble(
-  ~ Year,
-  ~ Name,
-  ~ Duty,
-  '09/2017 - 12/2017',
-  "EDUC 391: Educational Psychology and Human Development",
-  "Participated in course design; taught weekly lectures; graded assignments and exams; held office hours"
-) %>%
-  detailed_entries(where = Year,
-                   with = Name,
-                   what = Duty) 
-```
-
-## Graduate Student Instructor
-
-```{r}
-tribble(
-  ~ Year,
-  ~ Name,
-  ~ Duty,
-  '01/2019 - 04/2019',
-  "PSYCH 111: Introduction to Psychology",
-  "Taught three one-hour classes per week; graded student essays and exams; held office hours",
-  '09/2016 - 12/2016',
-  "PSYCH 240: Introduction to Cognitive Psychology",
-  "Taught three one-hour classes per week; graded student essays and exams; held office hours",
-  '2016 - 2020',
-  "PSYCH 457: Research in Educational and Cross-Cultural Settings",
-  "Graded student essays and exams; held office hours; supervised student research projects",
-  '2015 - 2019',
-  "Global Course Connection: Beijing Normal University",
-  "Supervised joint research projects between US and Chinese students; organized cultural exchange activities"
-) %>%
-  detailed_entries(where = Year,
-                   with = Name,
-                   what = Duty) 
-```
-
-# Open-Source Software
-
-- PupEyes: An Interactive Python Library for Pupil Size and Eye Movement Data Processing (https://github.com/HanZhang-psych/pupeyes)
-
 # Professional Service
+
 ## Object Perception, Attention, and Memory (OPAM) Conference Organizer
-- OPAM 31, November 16th 2023, San Francisco, CA, US
-- OPAM 32, November 21th 2024, New York City, NY, YS
-- http://www.opam.net/
 
-## Undergraduate Research Opportunity Program (UROP) Mentor
-- 2018 - current, mentored undergraduate students conducting research projects.
-- Mentored students: Madelyn Evans (2018), Nicole Fraija (2018), Yun Gi Hwang (2019), Alexander Fischer (2019), Esha Brar (2023)
-
-## STAR (Scholarship, Transferable skills, Academia & Research) Scholars Mentor
-- 2018-2020, mentored underrepresented students on academic research engagement and transferable skills.
-- https://lsa.umich.edu/psych/undergraduates/star-scholars-program.html
+-   OPAM 31, November 16th 2023, San Francisco, CA, US
+-   OPAM 32, November 21th 2024, New York City, NY, YS
+-   <https://opamconference.com/>
 
 ## Ad Hoc Reviewer
+
 -   Memory & Cognition
 -   NeuroImage
 -   Visual Cognition
@@ -305,9 +383,10 @@ tribble(
 -   PLOS One
 -   Journal of Memory and Language
 -   Neurobiology of Aging
--   Behavioral Research Methods
+-   Behavior Research Methods
 -   Psychonomic Bulletin & Review
 -   Attention, Perception, & Psychophysics
+-   Traffic Psychology and Behaviour
 
 # References
 
