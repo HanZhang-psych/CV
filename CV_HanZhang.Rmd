@@ -297,6 +297,12 @@ tribble(
   ~ Institution,
   ~ Supp,
   ~ Outcome,
+  '2026',
+  'Toward Human-Inspired Cognitive Architectures for Robust Autonomous Driving',
+  'Center for Connected and Automated Transportation',
+  'Role: Conceptualization; original draft preparation; reviewing & editing',
+  'Not Funded',
+  
   '2025',
   'Understanding Takeover Performance in Urgent Situations during Level-3 Driving',
   'UMTRI & Mcity Integration Fund, University of Michigan',
@@ -387,6 +393,8 @@ tribble(
 -   Psychonomic Bulletin & Review
 -   Attention, Perception, & Psychophysics
 -   Traffic Psychology and Behaviour
+-   IEEE Intelligent Transportation Systems Transaction
+-   Autism
 
 # References
 
