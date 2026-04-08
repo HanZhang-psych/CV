@@ -28,7 +28,7 @@ library(vitae);library(tibble)
 
 # Research Interests
 
-Attention; Cognitive Control; Distraction; Driver Behavior
+Attention; Cognitive Control; Distraction; Human-AI Systems
 
 # Employment
 
@@ -81,6 +81,8 @@ tribble(
 ```
 
 # Awards and Grants
+
+## As Assistant Research Scientist
 
 ```{r}
 tribble(
