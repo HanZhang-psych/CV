@@ -1,6 +1,5 @@
 -- List of mentee names to underline (full names as they appear in citations)
 local mentee_names = {
-    {last = "Zhou", first = "W."},
     {last = "Brar", first = "E."},
     {last = "Evans", first = "M."}, 
     {last = "Fraija", first = "N."},

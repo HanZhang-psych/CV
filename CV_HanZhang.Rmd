@@ -28,7 +28,7 @@ library(vitae);library(tibble)
 
 # Research Interests
 
-Attention; Cognitive Control; Distraction; Human-AI Systems
+Attention; Cognitive Control; Human-AI Systems
 
 # Employment
 
@@ -185,7 +185,7 @@ Underlined names indicate undergraduate research mentees.
 bibliography_entries("bibs/journal_articles.bib")
 ```
 
-# Under Review
+# Preprints
 
 \* indicates shared first authorship.
 
@@ -201,12 +201,18 @@ Underlined names indicate undergraduate research mentees.
 bibliography_entries("bibs/other.bib")
 ```
 
-# Selected Presentations
+# Conference Presentations
 
 Underlined names indicate undergraduate research mentees.
 
 ```{r}
-bibliography_entries("bibs/talks.bib")
+bibliography_entries("bibs/conference_presentations.bib")
+```
+
+# Invited Talks
+
+```{r}
+bibliography_entries("bibs/invited_talks.bib")
 ```
 
 # Teaching and Mentoring Experience
