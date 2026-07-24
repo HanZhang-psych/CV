@@ -28,7 +28,7 @@ library(vitae);library(tibble)
 
 # Research Interests
 
-Attention; Cognitive Control; Human-AI Systems
+Attention; Cognitive Control; Human-AI Interaction
 
 # Employment
 
@@ -179,15 +179,13 @@ tribble(
 
 # Journal Articles
 
-Underlined names indicate undergraduate research mentees.
+\* indicates shared first authorship. Underlined names indicate undergraduate research mentees.
 
 ```{r}
 bibliography_entries("bibs/journal_articles.bib")
 ```
 
 # Preprints
-
-\* indicates shared first authorship.
 
 ```{r}
 bibliography_entries("bibs/preprints.bib")
@@ -296,84 +294,6 @@ tribble(
 -   [PupEyes: An Interactive Python Library for Eye Movement Data Processing](https://pupeyes.readthedocs.io/)
 
 
-# Grant-Writing Experience
-
-```{r}
-tribble(
-  ~ Year,
-  ~ Name,
-  ~ Institution,
-  ~ Supp,
-  ~ Outcome,
-  '2026',
-  'Toward Human-Inspired Cognitive Architectures for Robust Autonomous Driving',
-  'Center for Connected and Automated Transportation',
-  'Role: Conceptualization; original draft preparation; reviewing & editing',
-  'Not Funded',
-  
-  '2025',
-  'Understanding Takeover Performance in Urgent Situations during Level-3 Driving',
-  'UMTRI & Mcity Integration Fund, University of Michigan',
-  'Role: Conceptualization; original draft preparation; reviewing & editing',
-  'Funded',
-  
-  '2024',
-  'The Object Perception, Attention, and Memory (OPAM) Conference',
-  'National Science Foundation',
-  'Role: Conceptualization; original draft preparation; reviewing & editing',
-  'Funded',
-  
-  '2024',
-  'Toward a Psychological and Neural Model of Conflict Resolution',
-  'National Science Foundation',
-  'Role: Conceptualization; original draft preparation; formal analysis; reviewing & editing',
-  'Funded',
-  
-  '2023',
-  'Investigating Interference-Control in ADHD Using a Novel Forced-Response Method',
-  'R21, National Institute of Mental Health',
-  'Role: Conceptualization; original draft preparation; formal analysis; reviewing & editing',
-  'Funded',
-  
-  '2023',
-  'Probing Attentional Allocation with a Novel Forced-Response Method',
-  'National Science Foundation',
-  'Role: Conceptualization; original draft preparation; formal analysis; reviewing & editing',
-  'Funded',
-
-  '2022',
-  'Uncovering Mechanisms of Interference-Resolution with a Novel Forced-Response Method',
-  'National Science Foundation',
-  'Role: Conceptualization; original draft preparation; formal analysis; reviewing & editing',
-  'Not Funded',
-  
-  '2021',
-  'Dissecting Distractibility by the Capture of Attention',
-  'National Science Foundation',
-  'Role: Original draft preparation; formal analysis; reviewing & editing',
-  'Not Funded',
-  
-  '2020',
-  'Mitigating Distraction from External and Internal Sources',
-  'National Science Foundation',
-  'Role: Original draft preparation; formal analysis; reviewing & editing',
-  'Not Funded',
-  
-  '2019',
-  'Failure to Resist External and Internal Distraction in ADHD',
-  'R01, National Institute of Mental Health',
-  'Role: Formal analysis; original draft preparation; reviewing & editing',
-  'Not Funded'
-) %>%
-  detailed_entries(
-    where = Year,
-    with = Name,
-    what = Institution,
-    why = Supp,
-    when = Outcome
-  ) 
-```
-
 # Professional Service
 
 ## Object Perception, Attention, and Memory (OPAM) Conference Organizer
@@ -403,6 +323,7 @@ tribble(
 -   Traffic Psychology and Behaviour
 -   IEEE Intelligent Transportation Systems Transaction
 -   Autism
+-   Journal of Gerontology: Psychological Sciences
 
 # References
 
